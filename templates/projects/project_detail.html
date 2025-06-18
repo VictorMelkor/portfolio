@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load user_is_admin %} {# você precisará de uma tag custom para checar admin ou usar if user.is_superuser #}
+
+{% block title %}{{ project.title }} - Projeto{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>{{ project.title }}</h1>
+
+    <img src="{{ project.image.url }}" alt="Imagem do projeto {{ project.title }}" class="project-image" />
+
+    <p><strong>Descrição:</strong> {{ project.description }}</p>
+    <p><strong>Tecnologias:</strong> {{ project.tech_stack }}</p>
+    <p><strong>URL:</strong> <a href="{{ project.url }}" target="_blank" rel="noopener">{{ project.url }}</a></p>
+
+    {% if user.is_superuser %}
+    <div class="admin-buttons">
+        <button id="btn-edit" type="button">Editar</button>
+        <button id="btn-delete" type="button">Excluir</button>
+    </div>
+    {% endif %}
+</div>
+
+<!-- Modal de edição (preencher via JS/AJAX) -->
+<div id="modal-edit" class="modal" style="display:none;">
+    <div class="modal-content">
+        <span class="close" id="close-edit">&times;</span>
+        <div id="edit-form-container"></div>
+    </div>
+</div>
+
+<!-- Modal de exclusão (confirmação simples) -->
+<div id="modal-delete" class="modal" style="display:none;">
+    <div class="modal-content">
+        <p>Tem certeza que deseja excluir este projeto?</p>
+        <button id="confirm-delete">Sim, excluir</button>
+        <button id="cancel-delete">Cancelar</button>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="{% static 'js/project_detail.js' %}" defer></script>
+{% endblock %}

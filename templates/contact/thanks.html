@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Obrigado pelo contato</title>
+    <script src="{% static 'js/thanks_redirect.js' %}" defer></script>
+</head>
+<body>
+    <h1>Obrigado pelo seu contato!</h1>
+    <p>Sua mensagem foi enviada com sucesso. Responderemos o mais breve possível.</p>
+    <p>Você será redirecionado para a página inicial em <span id="countdown">15</span> segundos...</p>
+    <a href="{% url 'home' %}">Voltar para a página inicial</a>
+</body>
+</html>
