@@ -3,7 +3,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# Environments
+# Virtual environments
 venv/
 env/
 ENV/
@@ -17,7 +17,6 @@ ENV/
 db.sqlite3
 media/
 staticfiles/
-static/
 
 # IDEs and editors
 .vscode/
