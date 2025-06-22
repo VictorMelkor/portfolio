@@ -5,13 +5,14 @@ class FormProject(forms.ModelForm):
     
     class Meta():
         model = Project
-        fields = ['title', 'description', 'tech_stack', 'url', 'image', 'is_featured']
+        fields = ['title', 'description', 'tech_stack', 'repo_url', 'demo_url', 'image', 'is_featured']
 
         labels = {
             'title': 'Nome do Projeto',
             'description': 'Descrição', 
             'tech_stack': 'Tecnologias', 
-            'url': 'URL do Projeto', 
+            'repo_url': 'URL do Repositório', 
+            'demo_url': 'URL do Deploy',
             'image': 'Imagem do Projeto', 
             'is_featured': 'É Destaque'
         }
@@ -33,11 +34,16 @@ class FormProject(forms.ModelForm):
                 'class': 'form-control',
                 'aria-label': 'Ex: Django, React, PostgreSQL'
                 }),
-            'url': forms.URLInput(attrs={
+            'repo_url': forms.URLInput(attrs={
+                'placeholder': 'https://github.com/seuusuario/projeto',
+                'class': 'form-control',
+                'aria-label': 'https://github.com/seuusuario/projeto'
+                }),
+            'demo_url': forms.URLInput(attrs={
                 'placeholder': 'https://exemplo.com/projeto',
                 'class': 'form-control',
                 'aria-label': 'https://exemplo.com/projeto'
-                }),            
+                }),              
             'image': forms.ClearableFileInput(attrs={
                 'class': 'form-control',
                 'aria-label': 'Imagem do projeto'

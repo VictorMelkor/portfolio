@@ -1,55 +1,29 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>{% block title %}Victor Rodrigues Portfolio{% endblock %}</title>
 
-    <title>{% block title %}Meu Portfólio{% endblock %}</title>
+  <!-- Favicons -->
+  <link href="{% static 'img/favicon.png' %}" rel="icon" />
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon" />
 
-    <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}">
-    <link rel="stylesheet" href="{% static 'vendor/boxicons/css/boxicons.min.css' %}">
-    <link rel="stylesheet" href="{% static 'vendor/glightbox/css/glightbox.min.css' %}">
-    <link rel="stylesheet" href="{% static 'vendor/swiper/swiper-bundle.min.css' %}">
-    
-    <!-- CSS modularizado -->
-    <link rel="stylesheet" href="{% static 'css/base/variables.css' %}">
-    <link rel="stylesheet" href="{% static 'css/base/general.css' %}">
-    <link rel="stylesheet" href="{% static 'css/layout/header.css' %}">
-    <link rel="stylesheet" href="{% static 'css/layout/navbar.css' %}">
-    <link rel="stylesheet" href="{% static 'css/layout/footer.css' %}">
-    <link rel="stylesheet" href="{% static 'css/components/scrolltop.css' %}">
-
-    {% block extra_head %}{% endblock %}
+  {% include 'includes/css.html' %}
 </head>
+
 <body>
-    <div class="header">
-        {% include 'includes/navmenu.html' %}
-    </div>
+  {% include 'includes/header.html' %}
+  {% include 'includes/hero.html' %}
 
-    <main id="main" class="main">
-        {% block content %}
-            {% include 'includes/messages.html' %}
-        {% endblock %}
-    </main>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
 
-    <footer class="footer">
-        {% include 'includes/footer.html' %}
-    </footer>
-
-    <a href="#" class="scroll-top d-flex align-items-center justify-content-center">
-        <i class="bi bi-arrow-up-short"></i>
-    </a>
-
-    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-    <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
-    <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
-    <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
-    <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
-
-    {% block extra_scripts %}{% endblock %}
+  {% include 'includes/footer.html' %}
+  {% include 'includes/scripts.html' %}
 </body>
+
 </html>

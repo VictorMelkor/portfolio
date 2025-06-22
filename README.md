@@ -1,28 +1,61 @@
-# Portfólio Fullstack Django
+# Portfólio Fullstack com Django
 
-Projeto pessoal de portfólio desenvolvido com Django (Python), HTML, CSS e JavaScript vanilla.  
-O site exibe informações pessoais, projetos, currículo, certificados e possui formulário de contato funcional.
+Projeto pessoal de portfólio desenvolvido com **Django (Python)** e frontend manual utilizando **HTML5, CSS3** e **JavaScript vanilla**.  
+O objetivo é apresentar informações profissionais, projetos, habilidades e certificados, além de permitir contato direto por meio de um formulário funcional.
 
-## Tecnologias
+---
 
-- Python 3.x  
-- Django  
-- SQLite (desenvolvimento) / PostgreSQL (produção)  
-- HTML5, CSS3 (modularizado), JavaScript vanilla  
-- Deploy gratuito no Render  
+## 🚀 Tecnologias Utilizadas
 
-## Estrutura do Projeto
+- **Backend:** Django 4+, Python 3.12+
+- **Frontend:** HTML, CSS modularizado, JavaScript puro
+- **Banco de dados:** SQLite (desenvolvimento) e PostgreSQL (produção)
+- **Template base:** iPortfolio (adaptado do BootstrapMade)
+- **Deploy:** Plataforma gratuita [Render](https://render.com)
+- **Gerenciamento de ambiente:** Variáveis sensíveis via `.env` com `python-dotenv`
 
-- Apps principais: `core`, `contact`, `projects`, `resume`, `users`, `settings`, `portfolio`  
-- Upload de mídia (imagens, PDFs) configurado para produção  
-- Frontend baseado no template iPortfolio adaptado e modularizado  
+---
 
-## Status
+## 🧱 Estrutura e Funcionalidades
 
-- Funcionalidade básica implementada para formulário de contato  
-- Modelo de usuário customizado e admin personalizado  
-- Pendências: criar forms para todas as models, views CRUD, uploads, segurança, SEO e documentação  
+- Organização modular com apps separados:
+  - `core`, `contact`, `projects`, `resume`, `users`, `settings`, `portfolio`
+- Painel administrativo via Django Admin, com modelo de usuário customizado
+- Upload e exibição de mídias (imagens, PDFs)
+- Formulário de contato funcional com persistência no banco e redirecionamento
+- Página única (landing page) com seções: Sobre, Habilidades, Currículo, Portfólio, Serviços e Contato
+- Suporte a responsividade e acessibilidade básica
+- Design leve, baseado em tema escuro/claro (modo escuro planejado com persistência futura)
 
-## Contato
+---
 
-Projeto para fins pessoais. Qualquer dúvida, entre em contato.
+## 📌 Status do Projeto
+
+- ✅ Estrutura base pronta e deploy funcional no Render
+- ✅ Landing page finalizada com formulário dinâmico integrado
+- ✅ Administração via Django Admin operante
+- 🚧 Em desenvolvimento:
+  - Forms e views para CRUD das demais entidades
+  - Uploads e validações de arquivos
+  - Páginas de erro personalizadas
+  - SEO básico e acessibilidade
+  - reCAPTCHA para formulário de contato
+  - Testes automatizados (`pytest-django`)
+  - Modo escuro com `localStorage`
+
+
+
+---
+
+## 🤝 Contato
+
+Este projeto foi desenvolvido com fins pessoais e educacionais.  
+Em caso de dúvidas, sugestões ou propostas, entre em contato por:
+
+- Email: [victor.melkor@gmail.com](mailto:victor.melkor@gmail.com)
+
+
+---
+
+> **Nota:** Este repositório contém o backend completo do projeto. Para o deploy local, configure um ambiente virtual com as dependências listadas em `requirements.txt` e crie um arquivo `.env` conforme o exemplo.
+

@@ -19,7 +19,6 @@ class ContactForm(forms.ModelForm):
             'name': forms.TextInput(attrs={
                 'placeholder': 'Digite seu nome completo',
                 'class': 'form-control', 
-                'autofocus': True,
                 'aria-label': 'Nome Completo'
             }),
             'email': forms.EmailInput(attrs={

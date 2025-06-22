@@ -2,11 +2,30 @@
 {% load static %}
 
 {% block content %}
-<div>
-    <form method="post" novalidate>
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Enviar</button>
-    </form>
-</div>
+<section class="section light-background">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-10">
+        <h2 class="mb-4 text-center">Entre em Contato</h2>
+        <form method="post" novalidate class="row g-3">
+          {% csrf_token %}
+
+          {% for field in form %}
+            <div class="col-12">
+              <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
+              {{ field }}
+              {% if field.errors %}
+                <div class="text-danger small">{{ field.errors }}</div>
+              {% endif %}
+            </div>
+          {% endfor %}
+
+          <div class="col-12 text-center">
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 {% endblock %}

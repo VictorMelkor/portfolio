@@ -54,6 +54,19 @@ body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
+  flex: 1;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+
+main.main {
+  flex: 1; /* Isso empurra o footer pra base da tela */
 }
 
 a {
@@ -72,52 +85,38 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--heading-font);
 }
 
-/* PHP Email Form Messages */
-.php-email-form .error-message {
-  display: none;
-  background: #df1529;
-  color: #ffffff;
-  text-align: left;
-  padding: 15px;
-  margin-bottom: 24px;
+.section-title h2 {
+  position: relative;
+  padding-bottom: 10px;
+  font-weight: 700;
+}
+
+.resume-title {
+  position: relative;
+  padding-bottom: 8px;
   font-weight: 600;
+  font-size: 1.8rem; /* ajuste conforme precisar */
+  color: var(--heading-color);
 }
 
-.php-email-form .sent-message {
-  display: none;
-  color: #ffffff;
-  background: #059652;
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
+.contact-title {
+  position: relative;
+  padding-bottom: 8px;
+  margin-bottom: -5px;
   font-weight: 600;
+  font-size: 1.2rem; /* ajuste conforme precisar */
+  color: var(--heading-color);
 }
 
-.php-email-form .loading {
-  display: none;
-  background: var(--surface-color);
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-}
-
-.php-email-form .loading:before {
+.section-title h2::after {
   content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid var(--accent-color);
-  border-top-color: var(--surface-color);
-  animation: php-email-form-loading 1s linear infinite;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px; /* largura do traço */
+  height: 4px;  /* altura do traço */
+  background-color: var(--accent-color); /* cor azul */
+  border-radius: 2px;
 }
 
-@keyframes php-email-form-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
+
