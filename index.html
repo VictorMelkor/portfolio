@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO -->
     <title>Victor Melkor - Desenvolvimento Web Full Stack</title>
-    <meta name="description" content="Desenvolvedor Web Full Stack especializado em criar sites profissionais, rápidos e responsivos. Conheça meus serviços e portfólio.">
-    <meta name="keywords" content="desenvolvedor web, sites profissionais, full stack, criação de sites, portfólio, Victor Melkor">
+    <meta name="description"
+        content="Desenvolvedor Web Full Stack especializado em criar sites profissionais, rápidos e responsivos. Conheça meus serviços e portfólio.">
+    <meta name="keywords"
+        content="desenvolvedor web, sites profissionais, full stack, criação de sites, portfólio, Victor Melkor">
     <meta name="author" content="Victor Melkor">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Victor Melkor - Desenvolvimento Web Full Stack">
-    <meta property="og:description" content="Criação de sites modernos e otimizados para o seu negócio. Confira meu portfólio e serviços.">
+    <meta property="og:description"
+        content="Criação de sites modernos e otimizados para o seu negócio. Confira meu portfólio e serviços.">
     <meta property="og:image" content="URL_DA_IMAGEM_DE_PREVIEW">
     <meta property="og:url" content="https://victormelkor.github.io">
     <meta property="og:type" content="website">
@@ -41,28 +45,34 @@
 <body>
     <header>
         <nav>
-            <a href="#" class="active">Início</a>
-            <a href="#">Sobre</a>
-            <a href="#">Curriculo</a>
-            <a href="#">Habilidades</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Serviços</a>
-            <a href="#">Contato</a>
+            <p class="logo">VR</p>
+            <button class="hamburger" id="hamburger" aria-label="Abrir menu">☰</button>
+            <div class="nav-links" id="nav-links">
+                <a href="#" class="active">Início</a>
+                <a href="#">Sobre</a>
+                <a href="#">Currículo</a>
+                <a href="#">Habilidades</a>
+                <a href="#">Portfólio</a>
+                <a href="#">Serviços</a>
+                <a href="#">Contato</a>
+            </div>
         </nav>
-        <!-- Botão de alternância de tema -->
-        <button id="theme-toggle" aria-label="Alterar tema">🌓</button>
+
     </header>
 
-    
+
 
     <main>
         <section class="hero">
             <article class="hero-container-title">
-                <h1>Victor Rodrigues, <br><span class="subtitle">DESENVOLVIMENTO WEB</span></h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet aut, aliquid nam voluptate repudiandae velit, pariatur deserunt maxime voluptatum officia autem reiciendis iure aperiam deleniti cumque, earum assumenda aspernatur nesciunt.</p>
+                <h1>Victor Rodrigues,</h1>
+                <h2 class="subtitle">DESENVOLVEDOR WEB</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet aut, aliquid nam voluptate
+                    repudiandae velit, pariatur deserunt maxime voluptatum officia autem reiciendis iure aperiam
+                    deleniti cumque, earum assumenda aspernatur nesciunt.</p>
 
-                <a href="#">Sobre mim</a>
-                <a href="#">Curriculo</a>
+                <a href="#" class="btn">Sobre mim</a>
+                <a href="#" class="btn">Curriculo</a>
             </article>
             <img class="hero-container-imagem" src="assets/img/hero.png" alt="">
 
@@ -71,12 +81,21 @@
         <section class="experience">
             <h3><span class="subtitle">MINHA EXPERIÊNCIA</span></h3>
             <H2>Soluções Inovadoras</H2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti distinctio consequatur fuga possimus minima quis earum tenetur, blanditiis id, libero officiis, tempore ad deserunt quasi delectus quia ab animi nihil.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti distinctio consequatur fuga possimus
+                minima quis earum tenetur, blanditiis id, libero officiis, tempore ad deserunt quasi delectus quia ab
+                animi nihil.</p>
         </section>
-        
+
     </main>
+
+            <!-- Botão de alternância de tema -->
+        <button id="theme-toggle" aria-label="Alterar tema">🌓</button>
 
     <!-- JS do controle de tema -->
     <script src="assets/js/theme.js"></script>
+    <script src="assets/js/pill-nav.js"></script>
+    <script src="assets/js/menu.js"></script>
+
 </body>
+
 </html>

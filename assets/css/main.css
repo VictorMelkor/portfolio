@@ -2,77 +2,156 @@
    VARIÁVEIS GLOBAIS
 =========================== */
 :root {
-  --color-bg: #141414; /* padrão dark */
+  /* 🎨 Cores */
+  --color-bg-dark: #141414;
+  --color-bg-alt: #22212A;
   --color-bg-highlight: #130039;
-  --color-text-primary: #ffffff;
-  --color-text-secondary: #a73892;
-  --color-text-tertiary: #ff43ae;
-  --color-text-muted: #f6f6f6;
-  --gradient-primary: linear-gradient(90deg, #451e94, #6b1873, #141414);
-  --gradient-secondary: linear-gradient(90deg, #451e94, #6b1873, #bb1ccb);
+  --color-purple-dark: #451e94;
+  --color-purple: #6b1873;
+  --color-pink: #a73892;
+  --color-pink-light: #ff43ae;
+  --color-gray-light: #f6f6f6;
+  --color-gray-dark: #555555;
+  --color-indigo: #6b4eff;
+
+  /* 🌈 Gradientes */
+  --gradient-primary: linear-gradient(90deg, var(--color-purple-dark), var(--color-purple), var(--color-bg-dark));
+  --gradient-secondary: linear-gradient(90deg, var(--color-purple-dark), var(--color-purple), var(--color-pink));
+
+  /* 🖋 Tipografia */
   --font-family-base: 'Poppins', sans-serif;
+  --font-size-base: 16px;
+  --font-size-h1: 2.3rem;
+  --font-size-h2: 1.4rem;
+  --font-size-h3: 1.2rem;
+
+  /* 📐 Container */
+  --container-width: 100%;
+  --container-padding: 1rem;
 }
 
-/* Tema claro automático (só se não houver override por classe) */
+/* Tema claro automático */
 @media (prefers-color-scheme: light) {
   :root {
-    --color-bg: #f6f6f6;
+    --color-bg-dark: #f6f6f6;
+    --color-bg-alt: #e0e0e0;
     --color-bg-highlight: #e0e0e0;
-    --color-text-primary: #141414;
-    --color-text-secondary: #6b1873;
-    --color-text-tertiary: #a73892;
-    --color-text-muted: #555555;
-    --gradient-primary: linear-gradient(90deg, #6b1873, #451e94, #f6f6f6);
-    --gradient-secondary: linear-gradient(90deg, #6b1873, #451e94, #bb1ccb);
+    --color-gray-light: #141414;
+    --color-gray-dark: #555;
+    --gradient-primary: linear-gradient(90deg, var(--color-purple), var(--color-purple-dark), #f6f6f6);
+    --gradient-secondary: linear-gradient(90deg, var(--color-purple), var(--color-purple-dark), var(--color-pink));
   }
 }
 
 /* 🔥 Overrides manuais */
 html.dark {
-  --color-bg: #141414;
-  --color-bg-alternative: #22212A;
-  --color-bg-highlight: #130039;
-  --color-text-primary: #ffffff;
-  --color-text-secondary: #a73892;
-  --color-text-tertiary: #ff43ae;
-  --color-text-muted: #f6f6f6;
-  --gradient-primary: linear-gradient(90deg, #451e94, #6b1873, #141414);
-  --gradient-secondary: linear-gradient(90deg, #451e94, #6b1873, #bb1ccb);
+  --color-bg: var(--color-bg-dark);
+  --color-text: #fff;
+  --color-accent-1: var(--color-pink);
+  --color-accent-2: var(--color-pink-light);
+  --color-muted: var(--color-gray-light);
 }
 
 html.light {
   --color-bg: #f6f6f6;
-  --color-bg-highlight: #e0e0e0;
-  --color-text-primary: #141414;
-  --color-text-secondary: #6b1873;
-  --color-text-tertiary: #a73892;
-  --color-text-muted: #555555;
-  --gradient-primary: linear-gradient(90deg, #6b1873, #451e94, #f6f6f6);
-  --gradient-secondary: linear-gradient(90deg, #6b1873, #451e94, #bb1ccb);
+  --color-text: #141414;
+  --color-accent-1: var(--color-purple);
+  --color-accent-2: var(--color-pink);
+  --color-muted: var(--color-gray-dark);
 }
 
 /* ===========================
-   ESTILOS BASE
+   ESTILOS BASE - MOBILE FIRST
 =========================== */
-body {
-  background: #451e94;
-  color: var(--color-text-primary);
-  font-family: var(--font-family-base);
-  transition: background 0.3s ease, color 0.3s ease;
-  margin: 2em 0 0 0;
-  
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-button#theme-toggle {
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Containers */
+.container {
+  width: var(--container-width);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--container-padding);
+}
+
+/* Botão de troca de tema */
+#theme-toggle {
   background: none;
-  border: 1px solid var(--color-text-secondary);
-  color: var(--color-text-primary);
+  border: 1px solid var(--color-accent-1);
+  color: var(--color-text);
   padding: 0.5rem 1rem;
+  border-radius: 4px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-button#theme-toggle:hover {
-  background: var(--color-text-secondary);
+#theme-toggle:hover {
+  background: var(--color-accent-1);
   color: #fff;
+}
+
+/* ===========================
+   TIPOGRAFIA
+=========================== */
+h1 {
+  font-size: var(--font-size-h1);
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  margin-bottom: 0.8rem;
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  margin-bottom: 0.5rem;
+}
+
+/* ===========================
+   BREAKPOINTS
+=========================== */
+@media (min-width: 600px) {
+  :root {
+    --font-size-h1: 2rem;
+    --font-size-h2: 1.6rem;
+    --font-size-h3: 1.3rem;
+    --container-padding: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --font-size-h1: 2.4rem;
+    --font-size-h2: 1.8rem;
+    --font-size-h3: 1.4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --font-size-h1: 2.8rem;
+    --font-size-h2: 2rem;
+    --font-size-h3: 1.6rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --font-size-h1: 3rem;
+    --font-size-h2: 2.2rem;
+    --font-size-h3: 1.8rem;
+  }
 }
