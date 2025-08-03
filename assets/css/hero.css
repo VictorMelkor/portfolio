@@ -4,8 +4,6 @@
 .hero {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   min-height: 80vh;
   background: var(--bg-dark);
@@ -31,40 +29,63 @@
 }
 
 .subtitle {
-    color: var(--color-pink-light);
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    text-align: left;
+  color: var(--color-pink-light);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: left;
 }
 
 .hero-container-imagem {
-    width: 30%;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
 }
 
 /* Botões */
+.hero-buttons {
+  display: flex;
+  justify-content: center;   /* 🔥 centraliza horizontalmente */
+  gap: 1rem;                 /* 🔥 cria espaçamento uniforme entre os botões */
+  flex-wrap: wrap;           /* 🔥 permite quebrar linha no mobile */
+  margin-top: 1rem;
+}
+
 .hero .btn {
-  display: inline-block;
   background: var(--color-indigo);
   color: #fff;
-  padding: 0.7rem 1.8rem;
-  margin-bottom: 2em;
-  margin-right: 1.5rem;
+  margin: 1em 0 2em 0;
+  padding: 0.5rem 2.5rem;
   border-radius: 5px;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   transition: background 0.3s ease, transform 0.3s ease;
 }
+
+
+.hero .btn-sobre {
+  background: var(--color-gray-light);
+  color: var(--color-bg-dark);
+}
+
+
+
 .hero .btn:hover {
   background: var(--color-pink);
   transform: scale(0.97);
+  color: var(--color-gray-light);
 }
 
 /* ===========================
    BREAKPOINTS
 =========================== */
 @media (min-width: 600px) {
-  .hero { padding: 3rem 2rem; }
-  .hero p { font-size: 1.1rem; }
+  .hero {
+    padding: 3rem 2rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -74,6 +95,7 @@
     justify-content: space-between;
     padding: 4rem 3rem;
   }
+
   .hero-content {
     flex: 1;
     max-width: 50%;
@@ -81,11 +103,21 @@
 }
 
 @media (min-width: 1024px) {
-  .hero h1 { font-size: 2.8rem; }
-  .hero p { font-size: 1.2rem; }
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
 }
 
 @media (min-width: 1440px) {
-  .hero h1 { font-size: 3rem; }
-  .hero p { font-size: 1.3rem; }
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.3rem;
+  }
 }
