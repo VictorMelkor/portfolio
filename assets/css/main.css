@@ -1,0 +1,78 @@
+/* ===========================
+   VARIÁVEIS GLOBAIS
+=========================== */
+:root {
+  --color-bg: #141414; /* padrão dark */
+  --color-bg-highlight: #130039;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #a73892;
+  --color-text-tertiary: #ff43ae;
+  --color-text-muted: #f6f6f6;
+  --gradient-primary: linear-gradient(90deg, #451e94, #6b1873, #141414);
+  --gradient-secondary: linear-gradient(90deg, #451e94, #6b1873, #bb1ccb);
+  --font-family-base: 'Poppins', sans-serif;
+}
+
+/* Tema claro automático (só se não houver override por classe) */
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-bg: #f6f6f6;
+    --color-bg-highlight: #e0e0e0;
+    --color-text-primary: #141414;
+    --color-text-secondary: #6b1873;
+    --color-text-tertiary: #a73892;
+    --color-text-muted: #555555;
+    --gradient-primary: linear-gradient(90deg, #6b1873, #451e94, #f6f6f6);
+    --gradient-secondary: linear-gradient(90deg, #6b1873, #451e94, #bb1ccb);
+  }
+}
+
+/* 🔥 Overrides manuais */
+html.dark {
+  --color-bg: #141414;
+  --color-bg-alternative: #22212A;
+  --color-bg-highlight: #130039;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #a73892;
+  --color-text-tertiary: #ff43ae;
+  --color-text-muted: #f6f6f6;
+  --gradient-primary: linear-gradient(90deg, #451e94, #6b1873, #141414);
+  --gradient-secondary: linear-gradient(90deg, #451e94, #6b1873, #bb1ccb);
+}
+
+html.light {
+  --color-bg: #f6f6f6;
+  --color-bg-highlight: #e0e0e0;
+  --color-text-primary: #141414;
+  --color-text-secondary: #6b1873;
+  --color-text-tertiary: #a73892;
+  --color-text-muted: #555555;
+  --gradient-primary: linear-gradient(90deg, #6b1873, #451e94, #f6f6f6);
+  --gradient-secondary: linear-gradient(90deg, #6b1873, #451e94, #bb1ccb);
+}
+
+/* ===========================
+   ESTILOS BASE
+=========================== */
+body {
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-base);
+  transition: background 0.3s ease, color 0.3s ease;
+  margin: 0;
+  padding: 2rem;
+}
+
+button#theme-toggle {
+  background: none;
+  border: 1px solid var(--color-text-secondary);
+  color: var(--color-text-primary);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button#theme-toggle:hover {
+  background: var(--color-text-secondary);
+  color: #fff;
+}
