@@ -29,6 +29,8 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/hero.css">
+    <link rel="stylesheet" href="assets/css/experience.css">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,7 +41,7 @@
 <body>
     <header>
         <nav>
-            <a href="#">Início</a>
+            <a href="#" class="active">Início</a>
             <a href="#">Sobre</a>
             <a href="#">Curriculo</a>
             <a href="#">Habilidades</a>
@@ -47,14 +49,31 @@
             <a href="#">Serviços</a>
             <a href="#">Contato</a>
         </nav>
-
-        <h1>Meu Portfólio</h1>
         <!-- Botão de alternância de tema -->
         <button id="theme-toggle" aria-label="Alterar tema">🌓</button>
     </header>
 
+    
+
     <main>
-        <p>Bem-vindo ao meu site! Clique no ícone para trocar o tema.</p>
+        <section class="hero">
+            <article class="hero-container-title">
+                <h1>Victor Rodrigues, <br><span class="subtitle">DESENVOLVIMENTO WEB</span></h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet aut, aliquid nam voluptate repudiandae velit, pariatur deserunt maxime voluptatum officia autem reiciendis iure aperiam deleniti cumque, earum assumenda aspernatur nesciunt.</p>
+
+                <a href="#">Sobre mim</a>
+                <a href="#">Curriculo</a>
+            </article>
+            <img class="hero-container-imagem" src="assets/img/hero.png" alt="">
+
+        </section>
+
+        <section class="experience">
+            <h3><span class="subtitle">MINHA EXPERIÊNCIA</span></h3>
+            <H2>Soluções Inovadoras</H2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti distinctio consequatur fuga possimus minima quis earum tenetur, blanditiis id, libero officiis, tempore ad deserunt quasi delectus quia ab animi nihil.</p>
+        </section>
+        
     </main>
 
     <!-- JS do controle de tema -->

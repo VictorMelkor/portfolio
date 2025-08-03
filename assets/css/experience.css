@@ -1,0 +1,14 @@
+.experience {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--color-bg-alternative);  
+    padding: 2em;
+}
+
+.experience h2 {
+    font-size: 2em;
+    padding: 0 0;
+}
