@@ -2,131 +2,137 @@
    NAVIGAÇÃO - MOBILE FIRST
 =========================== */
 nav {
-    position: relative !important;
+  position: relative !important;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 90vw;
+  max-width: 1200px;
+  margin: 1rem auto;
+  background-color: var(--color-bg-alt);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  gap: 0.5rem;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.08);
+  /* brilho em volta */
+
+}
+
+.logo {
+  background-color: var(--color-purple-dark);
+  border-radius: 50%;
+  padding: 0.5em;
+  font-weight: 700;
+}
+
+/* Botão Hamburguer */
+.hamburger {
+  background: none;
+  border: none;
+  margin-left: auto;
+  font-size: 1.8rem;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.hamburger.active {
+  transform: rotate(90deg);
+}
+
+/* 🔥 Pill animado */
+nav::before {
+  display: none !important;
+  content: "" !important;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 0;
+  height: calc(100% - 6px);
+  margin-top: 10px;
+  background-color: var(--color-pink);
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+/* Links container */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: var(--color-bg-alt);
+  width: 200px;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Exibir menu quando open */
+.nav-links.open {
+  display: flex;
+}
+
+/* Links */
+.nav-links a {
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  color: var(--color-text);
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  transition: color 0.3s ease, background 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: var(--color-indigo);
+}
+
+.nav-links a.active {
+  background-color: var(--color-pink);
+  color: #fff;
+}
+
+/* ===========================
+     BREAKPOINTS
+  =========================== */
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav-links {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 90vw;
-    max-width: 1200px;
-    margin: 1rem auto;
-    background-color: var(--color-bg-alt);
-    padding: 0.5rem 1rem;
-    border-radius: 50px;
+    position: static;
+    flex-direction: row;
+    background: transparent;
+    box-shadow: none;
+    width: auto;
+    padding: 0;
     gap: 0.5rem;
-    box-shadow: 0 0 10px rgba(255,255,255,0.08); /* brilho em volta */
-    
   }
 
   .logo {
-    background-color: var(--color-purple-dark);
-    border-radius: 50%;
-    padding: 0.5em;
-    font-weight: 700;
-  }
-
-  /* Botão Hamburguer */
-  .hamburger {
-    background: none;
-    border: none;
-    margin-left: auto;
-    font-size: 1.8rem;
-    color: var(--color-text);
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-
-  .hamburger.active {
-    transform: rotate(90deg);
-  }
-
-  /* 🔥 Pill animado */
-  nav::before {
-    display: none !important;
-    content: "" !important;
-    position: absolute;
-    top: 10px;
-    left: 0;
-    width: 0;
-    height: calc(100% - 6px);
-    margin-top: 10px;
-    background-color: var(--color-pink);
-    border-radius: 50px;
-    transition: all 0.3s ease;
-    pointer-events: none;
-  }
-
-  /* Links container */
-  .nav-links {
     display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: var(--color-bg-alt);
-    width: 200px;
-    border-radius: 8px;
-    padding: 1rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   }
+}
 
-  /* Exibir menu quando open */
-  .nav-links.open {
-    display: flex;
+@media (min-width: 600px) {
+  nav {
+    width: 85vw;
   }
+}
 
-  /* Links */
-  .nav-links a {
-    position: relative;
-    z-index: 1;
-    text-decoration: none;
-    color: var(--color-text);
-    padding: 0.5rem 1.2rem;
-    border-radius: 50px;
-    transition: color 0.3s ease, background 0.3s ease;
+@media (min-width: 1024px) {
+  nav {
+    width: 75vw;
   }
-  .nav-links a:hover{
-    background-color: var(--color-indigo);
-  }
-  .nav-links a.active {
-    background-color: var(--color-pink);
-    color: #fff;
-  }
+}
 
-  /* ===========================
-     BREAKPOINTS
-  =========================== */
-  @media (min-width: 768px) {
-    .hamburger {
-      display: none;
-    }
-    .nav-links {
-      display: flex;
-      position: static;
-      flex-direction: row;
-      background: transparent;
-      box-shadow: none;
-      width: auto;
-      padding: 0;
-      gap: 0.5rem;
-    }
-
-    .logo {
-      display: none;
-    }
+@media (min-width: 1440px) {
+  nav {
+    width: 70vw;
   }
-
-  @media (min-width: 600px) {
-    nav {
-      width: 85vw;
-    }
-  }
-  @media (min-width: 1024px) {
-    nav {
-      width: 75vw;
-    }
-  }
-  @media (min-width: 1440px) {
-    nav {
-      width: 70vw;
-    }
-  }
+}

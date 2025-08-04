@@ -17,6 +17,7 @@
   margin-bottom: 0;
   font-weight: 700;
   text-align: left;
+  margin-top: -0.5em;
 }
 
 /* Subtítulo */
@@ -39,21 +40,25 @@
   width: 100%;
   height: auto;
   border-radius: 20px;
+  margin-top: 0;
 }
 
 /* Botões */
 .hero-buttons {
   display: flex;
-  justify-content: center;   /* 🔥 centraliza horizontalmente */
-  gap: 1rem;                 /* 🔥 cria espaçamento uniforme entre os botões */
-  flex-wrap: wrap;           /* 🔥 permite quebrar linha no mobile */
+  justify-content: center;
+  /* 🔥 centraliza horizontalmente */
+  gap: 1rem;
+  /* 🔥 cria espaçamento uniforme entre os botões */
+  flex-wrap: wrap;
+  /* 🔥 permite quebrar linha no mobile */
   margin-top: 1rem;
 }
 
 .hero .btn {
   background: var(--color-purple-dark);
   color: #fff;
-  margin: 1em 0 2em 0;
+  margin: 1em 0 -1.5em 0;
   padding: 0.5rem 2.5rem;
   border-radius: 5px;
   text-decoration: none;

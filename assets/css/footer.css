@@ -28,8 +28,8 @@
 .hr-inset {
   border: none;
   height: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);   /* linha clara */
-  border-bottom: 1px solid rgba(0, 0, 0, 0.6);      /* linha escura */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);   /* linha clara */
+  border-top: 1px solid rgba(0, 0, 0, 0.6);      /* linha escura */
   margin: 1.5rem 0;
 }
 
