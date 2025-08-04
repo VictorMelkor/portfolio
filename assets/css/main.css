@@ -16,7 +16,7 @@
 
   /* 🌈 Gradientes */
   --gradient-primary: linear-gradient(90deg, var(--color-purple-dark), var(--color-purple), var(--color-bg-dark));
-  --gradient-secondary: linear-gradient(90deg, var(--color-purple-dark), var(--color-purple), var(--color-pink));
+  --gradient-secondary: linear-gradient(90deg, #ff43ae, #7028ff);
 
   /* 🖋 Tipografia */
   --font-family-base: 'Poppins', sans-serif;

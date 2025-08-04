@@ -1,0 +1,100 @@
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bg-alt);
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.testimonial1 {
+    background-color: var(--color-purple-dark);
+    border-radius: 20px;
+    padding: 1.5rem;
+    max-width: 350px;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    /* 🔥 texto fica sempre embaixo */
+    gap: 1rem;
+}
+
+/* 🔥 Topo (imagem + info lado a lado) */
+.testimonial1-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Imagem redonda */
+.testimonial1-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.img-gradient {
+    background: var(--gradient-secondary);
+    padding: 10px;
+    /* espessura da borda */
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.img-gradient img {
+    border-radius: 50%;
+    display: block;
+}
+
+
+/* Bloco com badge, nome e site */
+.testimonial1-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+/* Badge */
+.testimonial1-role {
+    display: block;
+    background-color: var(--color-pink-light);
+    width: fit-content;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 1.3em;
+    padding: 0.3em 0.8em 0.1em 0.8em;
+    margin: 0;
+    text-align: center;
+}
+
+/* Nome */
+.testimonial1-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+    text-align: left;
+}
+
+/* Site */
+.testimonial1-site {
+    font-size: 0.65em;
+    color: #ddd;
+    margin: 0;
+}
+
+.testimonial1-site a {
+    color: var(--color-pink-light);
+    text-decoration: none;
+
+}
+
+/* Texto do depoimento ocupa toda a largura */
+.testimonial1-text {
+    color: #fff;
+    font-size: 0.8em;
+    line-height: 1.5;
+    margin: 0;
+    text-align: justify;
+}

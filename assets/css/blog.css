@@ -1,16 +1,15 @@
-.experience {
+.blog {
     display: flex;
     flex-direction: column;
-    background-color: var(--color-bg-alt);
     padding: 2rem 1rem;
     text-align: center;
 }
 
-.experience .subtitle {
+.blog .subtitle {
     color: var(--color-pink-light);
 }
 
-.experience img {
+.blog img {
     width: 80%;
     height: auto;
     border-radius: 20px;
