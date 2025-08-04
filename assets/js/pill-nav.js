@@ -5,15 +5,38 @@ document.addEventListener("DOMContentLoaded", () => {
   // Função para saber se é mobile
   const isMobile = () => window.innerWidth < 768;
 
-  const movePill = (target) => {
-    if (isMobile()) return; // 🔥 não cria nem move o pill no mobile
+  // Aplica a classe active com base no caminho da URL
+  const setActiveLinkByURL = () => {
+    links.forEach(link => link.classList.remove("active"));
+    const currentPage = window.location.pathname.split("/").pop();
+    const activeLink = Array.from(links).find(link => {
+      const href = link.getAttribute("href");
+      return href === currentPage;
+    });
+    if (activeLink) {
+      activeLink.classList.add("active");
+    } else {
+      // fallback: ativa o primeiro link
+      links[0].classList.add("active");
+    }
+  };
 
-    // Criar elemento pill se não existir
+  // Move e cria o pill na posição do target
+  const movePill = (target, instant = false) => {
+    if (isMobile()) return; // não cria nem move no mobile
+
     let pillEl = nav.querySelector(".pill");
     if (!pillEl) {
       pillEl = document.createElement("span");
       pillEl.classList.add("pill");
       nav.appendChild(pillEl);
+    }
+
+    // Desativa transição temporariamente se instant == true
+    if (instant) {
+      pillEl.style.transition = "none";
+    } else {
+      pillEl.style.transition = "all 0.3s ease";
     }
 
     const rect = target.getBoundingClientRect();
@@ -24,6 +47,13 @@ document.addEventListener("DOMContentLoaded", () => {
     pillEl.style.height = `${rect.height - 6}px`;
     pillEl.style.left = `${rect.left - navRect.left}px`;
     pillEl.style.top = `10px`;
+
+    // Se foi desativada a transição, força repaint e ativa após frame
+    if (instant) {
+      requestAnimationFrame(() => {
+        pillEl.style.transition = "all 0.3s ease";
+      });
+    }
   };
 
   // CSS inicial do pill
@@ -37,26 +67,36 @@ document.addEventListener("DOMContentLoaded", () => {
       border-radius: 50px;
       z-index: 0;
       transition: all 0.3s ease;
+      pointer-events: none;
     }
   `;
   document.head.appendChild(style);
 
-  // Inicializar no ativo (somente desktop)
-  const active = nav.querySelector("a.active") || links[0];
-  movePill(active);
+  // Aplica a classe active baseado na URL atual
+  setActiveLinkByURL();
 
-  // Atualiza ao clicar (somente desktop)
+  // Inicializa o pill no link ativo sem animação
+  const active = nav.querySelector("a.active") || links[0];
+  movePill(active, true);
+
+  // Atualiza o pill ao clicar em links
   links.forEach(link => {
     link.addEventListener("click", e => {
+      e.preventDefault(); // previne navegação para teste local
       links.forEach(l => l.classList.remove("active"));
       e.target.classList.add("active");
       movePill(e.target);
     });
   });
 
-  // Remove o pill quando redimensionar para mobile
+  // Remove o pill no mobile, reposiciona no resize desktop
   window.addEventListener("resize", () => {
     const pillEl = nav.querySelector(".pill");
-    if (isMobile() && pillEl) pillEl.remove();
+    if (isMobile()) {
+      if (pillEl) pillEl.remove();
+    } else {
+      const activeLink = nav.querySelector("a.active") || links[0];
+      movePill(activeLink, true);
+    }
   });
 });
