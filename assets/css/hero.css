@@ -28,7 +28,7 @@
   text-align: left;
 }
 
-.subtitle {
+.hero .subtitle {
   color: var(--color-pink-light);
   font-size: 1.8rem;
   margin-bottom: 1rem;

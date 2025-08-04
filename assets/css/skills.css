@@ -1,0 +1,97 @@
+.skills {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.skills .subtitle {
+    color: var(--color-pink-light);
+}
+
+.skills-container1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: var(--color-pink);
+    gap: 1rem;
+    text-align: left;
+    border-radius: 20px;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.skills-container1 {
+    flex: 1;
+}
+
+.skills-icone {
+    width: 40px;
+    border-radius: 10px;
+}
+
+.skills-container1 h3 {
+    margin: 0.2rem 0;
+}
+
+.skills-container1 p {
+    max-width: 400px;
+    line-height: 1.5;
+    
+}
+
+.skills-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+}
+
+.skills-container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: var(--color-pink-light);
+    gap: 1rem;
+    text-align: left;
+    border-radius: 20px;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.skills-container2 {
+    flex: 1;
+}
+
+.skills-container2 h3 {
+    margin: 0.2rem 0;
+}
+
+.skills-container2 p {
+    max-width: 200px;
+    line-height: 1.5;
+    
+}
+
+.skills-wrapper {
+    display: flex;
+    justify-content: center;  /* centraliza na tela */
+    gap: 1rem;                /* espaço entre as caixas */
+    flex-wrap: wrap;          /* permite quebrar linha em telas menores */
+}
+
+.skills-container2 {
+    flex: 1 1 45%;            /* 🔥 cada caixa ocupa 45% da largura */
+    background-color: var(--color-pink-light);
+    border-radius: 20px;
+    padding: 1rem;
+    text-align: left;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;   /* conteúdo interno continua em coluna */
+}

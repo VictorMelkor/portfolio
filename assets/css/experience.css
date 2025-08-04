@@ -1,4 +1,18 @@
 .experience {
+    display: flex;
+    flex-direction: column;
     background-color: var(--color-bg-alt);
     padding: 2rem 1rem;
+    text-align: center;
+}
+
+.experience .subtitle {
+    color: var(--color-pink-light);
+}
+
+.experience img {
+    width: 90%;
+    height: auto;
+    border-radius: 20px;
+    padding: 1em 0;
 }
