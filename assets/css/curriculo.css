@@ -1,0 +1,10 @@
+.curriculo {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    text-align: left;
+}
+
+.curriculo .subtitle {
+    color: var(--color-pink-light);
+}
