@@ -1,85 +1,82 @@
+/* ===========================
+   🔹 TESTIMONIALS - MOBILE FIRST
+=========================== */
 .testimonials {
     display: flex;
     flex-direction: column;
     background-color: var(--color-bg-alt);
-    padding: 2rem 1rem;
+    padding: clamp(1.5rem, 2vw, 2.5rem) clamp(1rem, 2vw, 1.5rem);
     text-align: center;
 }
 
+/* Card individual do depoimento */
 .testimonial1 {
     background-color: var(--color-purple-dark);
-    border-radius: 20px;
-    padding: 1.5rem;
+    border-radius: clamp(15px, 2vw, 20px);
+    padding: clamp(1rem, 1.5vw, 1.5rem);
     max-width: 350px;
-    margin: 1rem auto;
+    margin: clamp(0.5rem, 1vw, 1rem) auto;
     display: flex;
     flex-direction: column;
-    /* 🔥 texto fica sempre embaixo */
-    gap: 1rem;
+    gap: clamp(0.75rem, 1vw, 1rem);
 }
 
-/* 🔥 Topo (imagem + info lado a lado) */
+/* Header do testimonial (imagem + info) */
 .testimonial1-header {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: clamp(0.75rem, 1vw, 1rem);
 }
 
-/* Imagem redonda */
-.testimonial1-img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
+/* Imagem redonda com gradiente */
 .img-gradient {
     background: var(--gradient-secondary);
-    padding: 10px;
-    /* espessura da borda */
+    padding: clamp(6px, 1vw, 10px);
     border-radius: 50%;
     display: inline-block;
 }
 
-.img-gradient img {
+.img-gradient img,
+.testimonial1-img {
     border-radius: 50%;
     display: block;
+    object-fit: cover;
+    width: clamp(60px, 7vw, 80px);
+    height: clamp(60px, 7vw, 80px);
 }
 
-
-/* Bloco com badge, nome e site */
+/* Bloco de informações (badge, nome, site) */
 .testimonial1-info {
     display: flex;
     flex-direction: column;
-    gap: 0.3rem;
+    gap: clamp(0.15rem, 0.5vw, 0.3rem);
+    text-align: left;
 }
 
-/* Badge */
+/* Badge do papel/posição */
 .testimonial1-role {
-    display: block;
     background-color: var(--color-pink-light);
-    width: fit-content;
     color: #fff;
-    border-radius: 20px;
-    font-size: 1.3em;
-    padding: 0.3em 0.8em 0.1em 0.8em;
+    border-radius: clamp(15px, 2vw, 20px);
+    font-size: clamp(1rem, 1.3vw, 1.3em);
+    padding: clamp(0.2em, 0.5vw, 0.3em) clamp(0.5em, 1vw, 0.8em) clamp(0.1em, 0.3vw, 0.15em);
+    width: fit-content;
     margin: 0;
     text-align: center;
 }
 
-/* Nome */
+/* Nome do depoente */
 .testimonial1-name {
-    font-size: 1.2em;
     font-weight: bold;
+    font-size: clamp(1rem, 1.2vw, 1.2em);
     color: #fff;
     margin: 0;
-    text-align: left;
 }
 
-/* Site */
+/* Site ou link relacionado */
 .testimonial1-site {
-    font-size: 0.65em;
+    font-size: clamp(0.55rem, 0.6vw, 0.65em);
     color: #ddd;
     margin: 0;
 }
@@ -87,13 +84,12 @@
 .testimonial1-site a {
     color: var(--color-pink-light);
     text-decoration: none;
-
 }
 
-/* Texto do depoimento ocupa toda a largura */
+/* Texto do depoimento */
 .testimonial1-text {
     color: #fff;
-    font-size: 0.8em;
+    font-size: clamp(0.7rem, 0.8vw, 0.8em);
     line-height: 1.5;
     margin: 0;
     text-align: justify;

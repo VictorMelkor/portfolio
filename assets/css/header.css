@@ -1,38 +1,42 @@
 /* ===========================
-   NAVIGAÇÃO - MOBILE FIRST
+   🔹 NAVEGAÇÃO - MOBILE FIRST
 =========================== */
 nav {
-  position: relative !important;
+  position: relative;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 90vw;
+  width: clamp(70vw, 85vw, 90vw);
   max-width: 1200px;
   margin: 1rem auto;
   background-color: var(--color-bg-alt);
-  padding: 0.5rem 1rem;
+  padding: clamp(0.4rem, 1vw, 0.8rem) clamp(0.8rem, 2vw, 1.2rem);
   border-radius: 50px;
-  gap: 0.5rem;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.08);
-  /* brilho em volta */
-
+  gap: clamp(0.4rem, 1vw, 0.5rem);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
 }
 
+/* Logo */
 .logo {
   background-color: var(--color-purple-dark);
   border-radius: 50%;
-  padding: 0.5em;
+  padding: clamp(0.4em, 1vw, 0.5em);
   font-weight: 700;
+  flex-shrink: 0;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
 }
 
-/* Botão Hamburguer */
+/* ===========================
+   🔹 BOTÃO HAMBURGUER
+=========================== */
 .hamburger {
   background: none;
   border: none;
   margin-left: auto;
-  font-size: 1.8rem;
+  font-size: clamp(1.5rem, 2vw, 2rem);
   color: var(--color-text);
   cursor: pointer;
+  will-change: transform;
   transition: transform 0.3s ease;
 }
 
@@ -40,7 +44,9 @@ nav {
   transform: rotate(90deg);
 }
 
-/* 🔥 Pill animado */
+/* ===========================
+   🔹 PILL ANIMADO (Indicador ativo)
+=========================== */
 nav .pill {
   position: absolute;
   top: 10px;
@@ -50,9 +56,12 @@ nav .pill {
   z-index: 0;
   transition: all 0.3s ease;
   pointer-events: none;
+  transform: translateZ(0);
 }
 
-/* Links container */
+/* ===========================
+   🔹 MENU DE LINKS
+=========================== */
 .nav-links {
   display: none;
   flex-direction: column;
@@ -60,26 +69,25 @@ nav .pill {
   top: 100%;
   right: 0;
   background: var(--color-bg-alt);
-  width: 200px;
+  width: clamp(180px, 20vw, 220px);
   border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: clamp(0.8rem, 1.5vw, 1rem);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.18);
 }
 
-/* Exibir menu quando open */
 .nav-links.open {
   display: flex;
 }
 
-/* Links */
 .nav-links a {
   position: relative;
   z-index: 1;
   text-decoration: none;
   color: var(--color-text);
-  padding: 0.5rem 1.2rem;
+  padding: clamp(0.4rem, 0.8vw, 0.5rem) clamp(1rem, 2vw, 1.2rem);
   border-radius: 50px;
   transition: color 0.3s ease, background 0.3s ease;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
 }
 
 .nav-links a:hover {
@@ -91,9 +99,11 @@ nav .pill {
   color: #fff;
 }
 
-/* ===========================
-     BREAKPOINTS
-  =========================== */
+/* =======================================
+   📌 BREAKPOINTS - RESPONSIVIDADE
+======================================= */
+
+/* 🔹 Menu desktop (≥768px) */
 @media (min-width: 768px) {
   .hamburger {
     display: none;
@@ -107,28 +117,10 @@ nav .pill {
     box-shadow: none;
     width: auto;
     padding: 0;
-    gap: 0.5rem;
+    gap: clamp(0.5rem, 1vw, 0.75rem);
   }
 
   .logo {
-    display: none;
-  }
-}
-
-@media (min-width: 600px) {
-  nav {
-    width: 85vw;
-  }
-}
-
-@media (min-width: 1024px) {
-  nav {
-    width: 75vw;
-  }
-}
-
-@media (min-width: 1440px) {
-  nav {
-    width: 70vw;
+    display: none; /* oculta logo no desktop */
   }
 }

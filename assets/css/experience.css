@@ -1,17 +1,41 @@
+/* ===========================
+   🔹 EXPERIENCE - MOBILE FIRST
+=========================== */
 .experience {
     display: flex;
     flex-direction: column;
     background-color: var(--color-bg-alt);
-    padding: 2rem 1rem;
+    padding: clamp(1.5rem, 2vw, 2.5rem) clamp(1rem, 2vw, 1.5rem);
     text-align: center;
 }
 
+/* Subtítulo */
 .experience .subtitle {
     color: var(--color-pink-light);
+    font-size: clamp(1.2rem, 1.5vw, 1.8rem);
+    margin-bottom: clamp(0.8rem, 1vw, 1rem);
 }
 
+/* Imagem dentro da experiência */
 .experience img {
     width: 100%;
     height: auto;
     border-radius: 20px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.experience img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* ===========================
+   📌 BREAKPOINTS - RESPONSIVIDADE
+=========================== */
+@media (min-width: 768px) {
+    .experience {
+        padding: clamp(2.5rem, 3vw, 4rem) clamp(2rem, 3vw, 3rem);
+        text-align: left;
+    }
 }

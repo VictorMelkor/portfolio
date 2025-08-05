@@ -1,66 +1,72 @@
+/* ===========================
+   🔹 CURRÍCULO - MOBILE FIRST
+=========================== */
 .curriculo {
     display: flex;
     flex-direction: column;
-    padding: 2rem 1rem;
+    padding: clamp(1.5rem, 2vw, 2.5rem) clamp(1rem, 2vw, 1.5rem);
     text-align: left;
 }
 
-.curriculo .subtitle {
+.curriculo .subtitle,
+.habilidades .subtitle,
+.hard-skills .subtitle,
+.soft-skills .subtitle,
+.curriculo-profissional .subtitle {
     color: var(--color-pink-light);
+    text-align: center;
+    margin-bottom: clamp(0.8rem, 1vw, 1rem);
 }
 
+/* ===========================
+   HABILIDADES - MOBILE FIRST
+=========================== */
 .habilidades {
     display: flex;
     flex-direction: column;
-    padding: 2rem 1rem;
+    padding: clamp(1.5rem, 2vw, 2.5rem) clamp(1rem, 2vw, 1.5rem);
     text-align: left;
     background-color: var(--color-bg-alt);
-}
-
-.habilidades .subtitle {
-    color: var(--color-pink-light);
 }
 
 .curriculo article,
 .habilidades article,
 .profissional div {
-    padding: 2rem 1rem;
+    padding: clamp(1.5rem, 2vw, 2.5rem) clamp(1rem, 2vw, 1.5rem);
 }
 
+/* ===========================
+   HARD SKILLS
+=========================== */
 .hard-skills {
     background-color: var(--color-purple-dark);
     border-radius: 20px;
-    padding: 1.5rem;
-    margin-top: 2rem;
-}
-
-.hard-skills .subtitle {
-    text-align: center;
-    margin-bottom: 1rem;
-    color: var(--color-pink-light);
+    padding: clamp(1rem, 1.5vw, 1.5rem);
+    margin-top: clamp(1.5rem, 2vw, 2.5rem);
 }
 
 /* skill container */
 .skill {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 1rem;
+    gap: clamp(0.5rem, 1vw, 1rem);
+    margin-bottom: clamp(0.8rem, 1vw, 1rem);
 }
 
 /* nome da tecnologia */
 .skill span:first-child {
-    width: 120px; /* largura fixa para alinhamento */
+    width: clamp(90px, 10vw, 120px);
     font-weight: 600;
+    white-space: nowrap;
 }
 
 /* barra de fundo */
 .progress-bar {
     flex: 1;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     overflow: hidden;
-    height: 10px;
+    height: clamp(8px, 1vw, 10px);
 }
 
 /* barra preenchida (animada via JS) */
@@ -74,36 +80,33 @@
 
 /* porcentagem ao lado */
 .percent {
-    min-width: 40px;
+    min-width: clamp(35px, 5vw, 40px);
     text-align: right;
     font-weight: bold;
+    font-size: clamp(0.8rem, 0.8vw, 1rem);
 }
 
-
+/* ===========================
+   SOFT SKILLS
+=========================== */
 .soft-skills {
     background-color: var(--color-purple-dark);
     border-radius: 20px;
-    padding: 1.5rem;
-    margin-top: 2rem;
-}
-
-.soft-skills .subtitle {
-    text-align: center;
-    margin-bottom: 1rem;
-    color: var(--color-pink-light);
+    padding: clamp(1rem, 1.5vw, 1.5rem);
+    margin-top: clamp(1.5rem, 2vw, 2.5rem);
 }
 
 /* bloco individual */
 .soft-skill {
     display: flex;
     align-items: flex-start;
-    gap: 10px;
-    margin-bottom: 1rem;
+    gap: clamp(0.5rem, 1vw, 1rem);
+    margin-bottom: clamp(0.8rem, 1vw, 1rem);
 }
 
 /* ícone */
 .soft-skill i {
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 1.5vw, 1.5rem);
     color: var(--color-pink-light);
     flex-shrink: 0;
 }
@@ -111,24 +114,23 @@
 /* título + descrição */
 .soft-skill h4 {
     margin: 0;
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 1vw, 1.1rem);
     color: #fff;
 }
 
 .soft-skill p {
     margin: 0.2rem 0 0;
-    font-size: 0.9rem;
-    color: rgba(255,255,255,0.8);
+    font-size: clamp(0.8rem, 0.8vw, 0.9rem);
+    color: rgba(255, 255, 255, 0.8);
     line-height: 1.4;
 }
 
+/* ===========================
+   CURRÍCULO PROFISSIONAL
+=========================== */
 .curriculo-profissional {
     display: flex;
     flex-direction: column;
-    padding: 2rem 1rem;
+    padding: clamp(1.5rem, 2vw, 2.5rem) clamp(1rem, 2vw, 1.5rem);
     text-align: left;
-}
-
-.curriculo-profissional .subtitle {
-    color: var(--color-pink-light);
 }

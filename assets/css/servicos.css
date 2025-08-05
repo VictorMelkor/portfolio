@@ -2,21 +2,22 @@
    SERVIÇOS - SEÇÃO PRINCIPAL
 =========================== */
 .servicos {
+    width: 100%;
     background-color: var(--color-bg);
-    padding: 2.5rem 1rem;
-    margin-top: 2.5rem;
+    padding: clamp(1.5rem, 2vw, 2.5rem) clamp(1rem, 2vw, 1.5rem);
+    margin: 0;
     text-align: center;
-    border-radius: 15px;
 }
 
 .servicos h2 {
-    font-size: var(--font-size-h2);
+    font-size: clamp(1.5rem, 2vw + 1rem, 2.5rem);
     color: var(--color-pink-light);
     margin-bottom: 1rem;
+    text-align: center;
 }
 
-.servicos>p {
-    max-width: 600px;
+.servicos > p {
+    max-width: clamp(280px, 50vw, 600px);
     margin: 0 auto 2rem;
     color: var(--color-muted);
     font-weight: 500;
@@ -26,12 +27,12 @@
 .servicos .servico-card {
     background: var(--color-purple-dark);
     border-radius: 15px;
-    padding: 1.5rem 1.2rem;
+    padding: clamp(1rem, 1vw + 0.5rem, 1.5rem) clamp(1rem, 2vw, 1.2rem);
     margin-bottom: 1.5rem;
     text-align: center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: default;
+    cursor: pointer;
 }
 
 .servicos .servico-card:hover {
@@ -40,7 +41,7 @@
 }
 
 .servicos .servico-card i {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 2vw + 0.5rem, 2.5rem);
     color: var(--color-pink-light);
     margin-bottom: 0.8rem;
 }
@@ -49,10 +50,11 @@
     color: #fff;
     margin-bottom: 0.8rem;
     font-weight: 600;
+    font-size: clamp(1.1rem, 1vw + 0.5rem, 1.4rem);
 }
 
 .servicos .servico-card p {
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 0.5vw + 0.5rem, 1rem);
     color: rgba(255, 255, 255, 0.85);
     line-height: 1.4;
 }
@@ -62,20 +64,19 @@
 =========================== */
 .investimento {
     background-color: var(--color-bg);
-    padding: 2.5rem 1rem;
+    padding: clamp(2rem, 2vw, 3rem) clamp(1rem, 2vw, 1.5rem);
     margin-top: 2.5rem;
-    
     text-align: center;
 }
 
 .investimento h2 {
-    font-size: var(--font-size-h2);
+    font-size: clamp(1.5rem, 2vw + 1rem, 2.5rem);
     color: var(--color-pink-light);
     margin-bottom: 1rem;
 }
 
-.investimento>p {
-    max-width: 600px;
+.investimento > p {
+    max-width: clamp(280px, 50vw, 600px);
     margin: 0 auto 2rem;
     color: var(--color-muted);
     font-weight: 500;
@@ -85,33 +86,35 @@
 .planos {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: clamp(1rem, 2vw, 1.5rem);
 }
 
 /* Cada plano */
 .plano {
     background: var(--color-purple-dark);
     border-radius: 15px;
-    padding: 1.5rem 1.2rem;
+    padding: clamp(1rem, 1vw + 0.5rem, 1.5rem) clamp(1rem, 2vw, 1.2rem);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     color: #fff;
+    cursor: default;
 }
 
 .plano h3 {
     margin-bottom: 0.8rem;
     font-weight: 600;
     color: var(--color-pink-light);
+    font-size: clamp(1.1rem, 1vw + 0.5rem, 1.4rem);
 }
 
 .plano p {
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 0.5vw + 0.5rem, 1rem);
     line-height: 1.4;
     margin-bottom: 1rem;
     color: rgba(255, 255, 255, 0.85);
 }
 
 .preco {
-    font-size: 1.1rem;
+    font-size: clamp(1.1rem, 1vw + 0.7rem, 1.3rem);
     font-weight: 700;
     color: var(--color-pink-light);
 }
@@ -121,33 +124,34 @@
 =========================== */
 .contato-servicos {
     background: var(--color-bg-alt);
-    padding: 2rem 1rem 3rem;
+    padding: clamp(1.5rem, 2vw, 3rem) clamp(1rem, 2vw, 1.5rem) clamp(2rem, 3vw, 3rem);
     margin-top: 2.5rem;
     text-align: center;
     border-radius: 15px;
 }
 
 .contato-servicos h2 {
-    font-size: var(--font-size-h2);
+    font-size: clamp(1.5rem, 2vw + 1rem, 2.5rem);
     color: var(--color-pink-light);
     margin-bottom: 1rem;
 }
 
 .contato-servicos p {
-    max-width: 600px;
+    max-width: clamp(280px, 50vw, 600px);
     margin: 0 auto 1.8rem;
     color: var(--color-muted);
     font-weight: 500;
+    font-size: clamp(0.9rem, 0.5vw + 0.5rem, 1rem);
 }
 
 /* Botão primário */
 .btn-primary {
     background: var(--color-pink-light);
     color: #fff;
-    padding: 0.75rem 2rem;
+    padding: clamp(0.5rem, 1vw, 0.75rem) clamp(1.5rem, 3vw, 2rem);
     border-radius: 50px;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 0.8vw, 1rem);
     text-decoration: none;
     display: inline-block;
     transition: background-color 0.3s ease;
@@ -163,40 +167,37 @@
 /* ===========================
    RESPONSIVIDADE
 =========================== */
-
 @media (min-width: 768px) {
-
     /* Layout dos cards e planos lado a lado */
     .servicos {
         display: flex;
         justify-content: center;
-        gap: 2rem;
+        gap: clamp(1rem, 2vw, 2rem);
         text-align: left;
     }
 
     .servicos .servico-card {
-        flex: 1 1 30%;
-        max-width: 320px;
+        flex: 1 1 clamp(28%, 30%, 32%);
+        max-width: clamp(280px, 30vw, 320px);
     }
 
     .planos {
         flex-direction: row;
         justify-content: center;
-        gap: 2rem;
+        gap: clamp(1rem, 2vw, 2rem);
     }
 
     .plano {
-        flex: 1 1 30%;
-        max-width: 320px;
+        flex: 1 1 clamp(28%, 30%, 32%);
+        max-width: clamp(280px, 30vw, 320px);
     }
 
     .contato-servicos {
-        padding: 3rem 1rem;
+        padding: clamp(2.5rem, 3vw, 3rem) clamp(1rem, 2vw, 1.5rem);
     }
 }
 
 @media (min-width: 1024px) {
-
     .servicos .servico-card,
     .plano {
         max-width: 280px;

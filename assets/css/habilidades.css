@@ -1,50 +1,51 @@
-
 /* ===========================
-   ESPECIALIDADES
+   🔹 ESPECIALIDADES - MOBILE FIRST
 =========================== */
 .especialidades {
     background-color: var(--color-bg-alt);
-    padding: 2rem 1rem;
-    margin-top: 2rem;
+    padding: clamp(1.5rem, 2vw, 2.5rem) clamp(1rem, 2vw, 1.5rem);
+    margin-top: clamp(1.5rem, 2vw, 2.5rem);
     text-align: center;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .especialidades p {
-    max-width: 600px;
-    margin: 0 auto 2rem;
-    color: rgba(255, 255, 255, 0.8);
+    max-width: clamp(280px, 50vw, 600px);
+    margin: 0 auto clamp(1.5rem, 2vw, 2rem);
 }
 
 /* Container de serviços */
 .servicos {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: clamp(0.8rem, 1vw, 1.2rem);
 }
 
 /* Card de cada especialidade */
 .servico-card {
     background: var(--color-purple-dark);
     border-radius: 15px;
-    padding: 1.2rem 1rem;
+    padding: clamp(0.8rem, 1vw, 1.2rem) clamp(0.8rem, 1.5vw, 1rem);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
 .servico-card i {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 2vw, 2rem);
     color: var(--color-pink-light);
     margin-bottom: 0.5rem;
 }
 
 .servico-card h4 {
     color: #fff;
-    margin: 0.5rem 0;
+    margin: clamp(0.3rem, 0.5vw, 0.5rem) 0;
+    font-size: clamp(1rem, 1vw + 0.2rem, 1.2rem);
 }
 
 .servico-card p {
-    font-size: 0.9rem;
-    color: rgba(255,255,255,0.7);
+    font-size: clamp(0.8rem, 0.5vw + 0.3rem, 0.9rem);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 /* Efeito hover */
@@ -54,34 +55,34 @@
 }
 
 /* ===========================
-   HARD SKILLS
+   🔹 HARD SKILLS
 =========================== */
 .hard-skills {
-    
-    padding: 2rem 1rem;
+    padding: clamp(1.5rem, 2vw, 2.5rem) clamp(1rem, 2vw, 1.5rem);
     border-radius: 20px;
-    margin-top: 2rem;
+    margin-top: clamp(1.5rem, 2vw, 2.5rem);
     text-align: center;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .hard-skills p {
-    max-width: 600px;
-    margin: 0 auto 2rem;
-    color: rgba(255,255,255,0.8);
+    max-width: clamp(280px, 50vw, 600px);
+    margin: 0 auto clamp(1.5rem, 2vw, 2rem);
 }
 
 /* Categorias */
 .skills-categorias {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: clamp(1.5rem, 2vw, 2rem);
 }
 
 /* Títulos das categorias */
 .categoria h4 {
     color: var(--color-pink-light);
-    margin-bottom: 1rem;
+    margin-bottom: clamp(0.8rem, 1vw, 1rem);
     text-align: left;
+    font-size: clamp(1rem, 1vw + 0.2rem, 1.2rem);
 }
 
 /* Barra Skill */
@@ -90,7 +91,7 @@
     background: var(--color-bg-alt);
     border-radius: 50px;
     height: 25px;
-    margin-bottom: 0.8rem;
+    margin-bottom: clamp(0.5rem, 1vw, 0.8rem);
     overflow: hidden;
 }
 
@@ -120,22 +121,23 @@
 }
 
 /* ===========================
-   RESPONSIVIDADE
+   🔹 RESPONSIVIDADE
 =========================== */
 
 /* Tablet e Desktop */
 @media (min-width: 768px) {
-    /* Serviços: mudar para grid com linhas e colunas */
+
+    /* Serviços: muda para grid flexível com wrap */
     .servicos {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 1rem; /* para manter espaçamento */
+        gap: clamp(0.8rem, 1vw, 1.2rem);
     }
 
     .servico-card {
-        flex: 1 1 45%;
-        max-width: 300px;
+        flex: 1 1 clamp(40%, 45%, 48%);
+        max-width: clamp(280px, 30vw, 300px);
     }
 
     /* Hard skills: categorias lado a lado */
@@ -146,15 +148,15 @@
     }
 
     .categoria {
-        flex: 1 1 45%;
-        max-width: 400px;
+        flex: 1 1 clamp(40%, 45%, 48%);
+        max-width: clamp(320px, 40vw, 400px);
     }
 }
 
 /* Desktop maior */
 @media (min-width: 1024px) {
     .servico-card {
-        flex: 1 1 30%;
+        flex: 1 1 clamp(25%, 30%, 30%);
         max-width: 280px;
     }
 }

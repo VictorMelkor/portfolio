@@ -1,86 +1,115 @@
+/* ===========================
+   🔹 FOOTER - MOBILE FIRST
+=========================== */
 .footer {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--color-bg-alt);
-    padding: 2rem 1rem;
-    text-align: left;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg-alt);
+  padding: clamp(1.5rem, 2vw, 2.5rem) clamp(1rem, 2vw, 1.5rem);
+  text-align: left;
 }
 
-
+/* Botões no footer */
 .footer .btn {
   background: var(--color-purple-dark);
   color: #fff;
-  margin: 1em 0 2em 0;
-  padding: 0.5rem 2.5rem;
+  margin: clamp(1em, 2vw, 1.5em) 0 clamp(2em, 3vw, 2.5em) 0;
+  padding: clamp(0.4rem, 1vw, 0.6rem) clamp(2rem, 3vw, 2.5rem);
   border-radius: 5px;
-  text-decoration: none;
   font-weight: 600;
-  
+  text-decoration: none;
   transition: background 0.3s ease, transform 0.3s ease;
 }
-
 .footer .btn:hover {
   background: var(--color-pink);
   transform: scale(0.97);
   color: var(--color-gray-light);
 }
 
+/* Linha horizontal inset */
 .hr-inset {
   border: none;
   height: 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);   /* linha clara */
-  border-top: 1px solid rgba(0, 0, 0, 0.6);      /* linha escura */
-  margin: 1.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.6);
+  margin: clamp(1rem, 2vw, 1.5rem) 0;
 }
 
+/* Logo do footer */
 .footer-logo {
-    background-color: var(--color-purple-dark);
-    border-radius: 50%;
-    width: fit-content;
-    padding: 0.5em;
-    font-weight: 700;
-    
+  background-color: var(--color-purple-dark);
+  border-radius: 50%;
+  width: fit-content;
+  padding: clamp(0.4em, 1vw, 0.6em);
+  font-weight: 700;
+  flex-shrink: 0;
 }
 
+/* Parágrafo com margem */
 .footer p {
-    margin-top: 1em;
-    text-align: left;
+  margin-top: clamp(1rem, 2vw, 1.5rem);
+  text-align: left;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
 }
 
+/* Ícones sociais */
 .footer-social {
   display: flex;
-  gap: 1rem;
-  
-  margin-top: 1rem;
+  gap: clamp(0.8rem, 1.5vw, 1.2rem);
+  margin-top: clamp(1rem, 2vw, 1.5rem);
 }
 
 .footer-social a {
   color: #fff;
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 1.5vw, 1.5rem);
   transition: color 0.3s ease, transform 0.3s ease;
 }
-
 .footer-social a:hover {
-  color: var(--color-pink-light);  /* muda cor no hover */
+  color: var(--color-pink-light);
   transform: scale(1.2);
 }
 
+/* Menu do footer */
 .footer-menu {
-    padding: 2em 0 1em 0;
+  padding: clamp(1.5em, 2vw, 2em) 0 clamp(1em, 1.5vw, 1.5em) 0;
 }
 
-.footer-menu a, li {
-    text-decoration: none;
-    color: var(--color-gray-light);
-    padding: 0.5em;
-    text-align: left;
+.footer-menu a,
+.footer-menu li {
+  text-decoration: none;
+  color: var(--color-gray-light);
+  padding: clamp(0.3em, 1vw, 0.5em);
+  text-align: left;
+  font-size: clamp(0.9rem, 1vw, 1rem);
 }
-
 .footer-menu a:hover {
-    color: var(--color-pink-light);
+  color: var(--color-pink-light);
 }
 
+/* Créditos */
 .creditos a {
-    text-decoration: none;
-    color: var(--color-pink-light);
+  text-decoration: none;
+  color: var(--color-pink-light);
+  font-size: clamp(0.9rem, 1vw, 1rem);
+}
+
+/* ===========================
+   📌 BREAKPOINTS - RESPONSIVIDADE
+=========================== */
+@media (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: clamp(2.5rem, 3vw, 3.5rem) clamp(1.5rem, 3vw, 2rem);
+  }
+
+  .footer p,
+  .footer-menu {
+    max-width: 45%;
+  }
+
+  .footer-social {
+    margin-top: 0;
+  }
 }
