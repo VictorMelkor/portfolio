@@ -1,0 +1,204 @@
+/* ===========================
+   SERVIÇOS - SEÇÃO PRINCIPAL
+=========================== */
+.servicos {
+    background-color: var(--color-bg);
+    padding: 2.5rem 1rem;
+    margin-top: 2.5rem;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.servicos h2 {
+    font-size: var(--font-size-h2);
+    color: var(--color-pink-light);
+    margin-bottom: 1rem;
+}
+
+.servicos>p {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    color: var(--color-muted);
+    font-weight: 500;
+}
+
+/* Cards de serviço */
+.servicos .servico-card {
+    background: var(--color-purple-dark);
+    border-radius: 15px;
+    padding: 1.5rem 1.2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+
+.servicos .servico-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.servicos .servico-card i {
+    font-size: 2.5rem;
+    color: var(--color-pink-light);
+    margin-bottom: 0.8rem;
+}
+
+.servicos .servico-card h3 {
+    color: #fff;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.servicos .servico-card p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.4;
+}
+
+/* ===========================
+   INVESTIMENTO
+=========================== */
+.investimento {
+    background-color: var(--color-bg);
+    padding: 2.5rem 1rem;
+    margin-top: 2.5rem;
+    
+    text-align: center;
+}
+
+.investimento h2 {
+    font-size: var(--font-size-h2);
+    color: var(--color-pink-light);
+    margin-bottom: 1rem;
+}
+
+.investimento>p {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    color: var(--color-muted);
+    font-weight: 500;
+}
+
+/* Container dos planos */
+.planos {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Cada plano */
+.plano {
+    background: var(--color-purple-dark);
+    border-radius: 15px;
+    padding: 1.5rem 1.2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+
+.plano h3 {
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    color: var(--color-pink-light);
+}
+
+.plano p {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.preco {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-pink-light);
+}
+
+/* ===========================
+   CHAMADA PARA AÇÃO
+=========================== */
+.contato-servicos {
+    background: var(--color-bg-alt);
+    padding: 2rem 1rem 3rem;
+    margin-top: 2.5rem;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.contato-servicos h2 {
+    font-size: var(--font-size-h2);
+    color: var(--color-pink-light);
+    margin-bottom: 1rem;
+}
+
+.contato-servicos p {
+    max-width: 600px;
+    margin: 0 auto 1.8rem;
+    color: var(--color-muted);
+    font-weight: 500;
+}
+
+/* Botão primário */
+.btn-primary {
+    background: var(--color-pink-light);
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background: var(--color-pink);
+    outline: none;
+}
+
+/* ===========================
+   RESPONSIVIDADE
+=========================== */
+
+@media (min-width: 768px) {
+
+    /* Layout dos cards e planos lado a lado */
+    .servicos {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        text-align: left;
+    }
+
+    .servicos .servico-card {
+        flex: 1 1 30%;
+        max-width: 320px;
+    }
+
+    .planos {
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .plano {
+        flex: 1 1 30%;
+        max-width: 320px;
+    }
+
+    .contato-servicos {
+        padding: 3rem 1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .servicos .servico-card,
+    .plano {
+        max-width: 280px;
+    }
+}
