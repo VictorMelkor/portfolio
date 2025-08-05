@@ -41,11 +41,14 @@
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/curriculo.css">
 
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 
 </head>
 
@@ -108,17 +111,92 @@
 
         </section>
 
-        <section class="curriculo">
+        <section class="habilidades">
+
             <article class="hard-skills">
                 <h3 class="subtitle">HARD SKILLS</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas voluptatum cupiditate quae delectus, voluptatibus, nesciunt omnis necessitatibus nihil quam commodi, impedit molestias totam harum inventore deserunt id officiis laudantium hic!</p>
+
+                <div class="skill" data-percent="90">
+                    <span>HTML5</span>
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                    <span class="percent">90%</span>
+                </div>
+
+                <div class="skill" data-percent="85">
+                    <span>CSS3</span>
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                    <span class="percent">85%</span>
+                </div>
+
+                <div class="skill" data-percent="70">
+                    <span>JavaScript</span>
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                    <span class="percent">70%</span>
+                </div>
+
+                <div class="skill" data-percent="80">
+                    <span>Python</span>
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                    <span class="percent">80%</span>
+                </div>
             </article>
+
+
 
             <article class="soft-skills">
                 <h3 class="subtitle">SOFT SKILLS</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae nulla odit, optio esse facilis ex nobis vel? Magni eligendi adipisci ex ut debitis eius rem porro quaerat, vitae ipsa eos.</p>
-            </article>
 
+                <div class="soft-skill">
+                    <i class="fas fa-comments"></i>
+                    <div>
+                        <h4>Comunicação Clara</h4>
+                        <p>Transmita ideias de forma objetiva, facilitando a colaboração com clientes e parceiros.</p>
+                    </div>
+                </div>
+
+                <div class="soft-skill">
+                    <i class="fas fa-lightbulb"></i>
+                    <div>
+                        <h4>Resolução de Problemas</h4>
+                        <p>Capacidade de analisar cenários complexos e propor soluções criativas e eficientes.</p>
+                    </div>
+                </div>
+
+                <div class="soft-skill">
+                    <i class="fas fa-tasks"></i>
+                    <div>
+                        <h4>Organização</h4>
+                        <p>Gestão eficiente do tempo e priorização de tarefas para cumprir prazos com qualidade.</p>
+                    </div>
+                </div>
+
+                <div class="soft-skill">
+                    <i class="fas fa-rocket"></i>
+                    <div>
+                        <h4>Proatividade</h4>
+                        <p>Antecipação de melhorias e busca constante por soluções que agregam valor.</p>
+                    </div>
+                </div>
+
+                <div class="soft-skill">
+                    <i class="fas fa-graduation-cap"></i>
+                    <div>
+                        <h4>Aprendizado Contínuo</h4>
+                        <p>Atualização constante para acompanhar novas tecnologias e tendências do mercado.</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="curriculo-profissional">
             <article class="profissional">
                 <div>
                     <h3 class="subtitle">EXPERIÊNCIA PROFISSIONAL</h3>
@@ -200,8 +278,8 @@
 
         <!-- JS do controle de tema -->
         <script src="assets/js/theme.js"></script>
-
         <script src="assets/js/menu.js"></script>
+        <script src="assets/js/hard-skills.js"></script>
     </body>
 
 </html>

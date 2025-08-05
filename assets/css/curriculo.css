@@ -8,3 +8,127 @@
 .curriculo .subtitle {
     color: var(--color-pink-light);
 }
+
+.habilidades {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    text-align: left;
+    background-color: var(--color-bg-alt);
+}
+
+.habilidades .subtitle {
+    color: var(--color-pink-light);
+}
+
+.curriculo article,
+.habilidades article,
+.profissional div {
+    padding: 2rem 1rem;
+}
+
+.hard-skills {
+    background-color: var(--color-purple-dark);
+    border-radius: 20px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.hard-skills .subtitle {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--color-pink-light);
+}
+
+/* skill container */
+.skill {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+/* nome da tecnologia */
+.skill span:first-child {
+    width: 120px; /* largura fixa para alinhamento */
+    font-weight: 600;
+}
+
+/* barra de fundo */
+.progress-bar {
+    flex: 1;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    height: 10px;
+}
+
+/* barra preenchida (animada via JS) */
+.progress {
+    background: linear-gradient(90deg, var(--color-pink-light), var(--color-indigo));
+    height: 100%;
+    width: 0; /* começa vazia */
+    border-radius: 10px;
+    transition: width 1.2s ease;
+}
+
+/* porcentagem ao lado */
+.percent {
+    min-width: 40px;
+    text-align: right;
+    font-weight: bold;
+}
+
+
+.soft-skills {
+    background-color: var(--color-purple-dark);
+    border-radius: 20px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.soft-skills .subtitle {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--color-pink-light);
+}
+
+/* bloco individual */
+.soft-skill {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+/* ícone */
+.soft-skill i {
+    font-size: 1.5rem;
+    color: var(--color-pink-light);
+    flex-shrink: 0;
+}
+
+/* título + descrição */
+.soft-skill h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.soft-skill p {
+    margin: 0.2rem 0 0;
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.4;
+}
+
+.curriculo-profissional {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    text-align: left;
+}
+
+.curriculo-profissional .subtitle {
+    color: var(--color-pink-light);
+}
