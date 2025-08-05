@@ -39,6 +39,11 @@
     <link rel="stylesheet" href="assets/css/testimonials.css">
     <link rel="stylesheet" href="assets/css/blog.css">
     <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/portfolio.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,10 +74,97 @@
     </header>
 
     <body>
-        
+
+        <section id="portfolio" class="portfolio container">
+            <h2>Portfólio</h2>
+            <p>Confira alguns projetos que desenvolvi, focados em responsividade, performance e design moderno.</p>
+
+            <!-- 🔹 Filtros -->
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="institucional">Institucional</button>
+                <button class="filter-btn" data-filter="landing">Landing Page</button>
+                <button class="filter-btn" data-filter="portfolio">Portfólio Pessoal</button>
+                <button class="filter-btn" data-filter="especial">Projeto Especial</button>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- Projeto 1 -->
+                <a href="https://exemplo1.com" target="_blank" rel="noopener" class="portfolio-card"
+                    data-category="institucional" aria-label="Abrir site Projeto Exemplo 1">
+                    <div class="swiper portfolio-swiper-1">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="assets/img/plano-1.jpg" alt="Projeto Exemplo 1 - Visão desktop">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/img/plano3.jpg" alt="Projeto Exemplo 1 - Visão mobile">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/img/esporte-3.jpg" alt="Projeto Exemplo 1 - Mockup responsivo">
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Projeto Exemplo 1</h3>
+                        <p>Site corporativo desenvolvido com foco em responsividade e experiência do usuário.</p>
+                    </div>
+                </a>
+
+                <!-- Projeto 2 -->
+                <a href="https://exemplo2.com" target="_blank" rel="noopener" class="portfolio-card"
+                    data-category="landing" aria-label="Abrir site Projeto Exemplo 2">
+                    <div class="swiper portfolio-swiper-2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="assets/img/esporte-3.jpg" alt="Projeto Exemplo 2 - Visão desktop">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/img/plano3.jpg" alt="Projeto Exemplo 2 - Visão mobile">
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Projeto Exemplo 2</h3>
+                        <p>Landing page para evento online, layout clean e integração com ferramentas de marketing.</p>
+                    </div>
+                </a>
+
+                <!-- Projeto 3 -->
+                <a href="https://exemplo3.com" target="_blank" rel="noopener" class="portfolio-card"
+                    data-category="portfolio" aria-label="Abrir site Projeto Exemplo 3">
+                    <div class="swiper portfolio-swiper-3">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="assets/img/esporte-3.jpg" alt="Projeto Exemplo 3 - Visão desktop">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/img/plano3.jpg" alt="Projeto Exemplo 3 - Visão mobile">
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Projeto Exemplo 3</h3>
+                        <p>Portfólio pessoal desenvolvido para profissional autônomo, totalmente responsivo.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
 
 
-                <footer class="footer">
+
+
+
+        <footer class="footer">
             <div class="contato">
                 <h2>Entre em Contato</h2>
                 <a class="btn" href="#">Contato</a>
@@ -123,10 +215,12 @@
             </div>
         </footer>
 
-        <!-- JS do controle de tema -->
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <script src="assets/js/portfolio-swiper.js"></script>
         <script src="assets/js/theme.js"></script>
-       
         <script src="assets/js/menu.js"></script>
+        <script src="assets/js/portfolio-filter.js"></script>
     </body>
 
 </html>
