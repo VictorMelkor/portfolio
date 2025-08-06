@@ -5,10 +5,9 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  min-height: 80vh;
   background: var(--color-bg-dark);
   color: var(--color-text);
-  padding: clamp(1.5rem, 2vw, 4rem) clamp(1rem, 2vw, 3rem);
+  padding: clamp(1.5rem, 2vw, 4rem) clamp(1.5rem, 4vw, 4rem);
 }
 
 /* Texto principal */
@@ -16,15 +15,16 @@
   font-size: clamp(2rem, 4vw, 3rem);
   margin-top: -0.5em;
   margin-bottom: 0;
+  padding-top: 0.7em;
   font-weight: 700;
-  text-align: left;
+  text-align: center;
 }
 
 /* Subtítulo */
 .hero p {
   font-size: clamp(1rem, 1.5vw, 1.3rem);
   max-width: 600px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   color: var(--color-muted);
   text-align: left;
 }
@@ -34,7 +34,7 @@
   color: var(--color-pink-light);
   font-size: clamp(1.5rem, 2vw, 1.8rem);
   margin-bottom: 1rem;
-  text-align: left;
+  text-align: center;
 }
 
 /* Container da imagem */
@@ -44,6 +44,7 @@
   height: auto;
   border-radius: clamp(15px, 2vw, 20px);
   margin-top: 0;
+  text-align: center;
 }
 
 /* Botões da hero */
@@ -52,7 +53,7 @@
   justify-content: center;
   gap: clamp(0.75rem, 1vw, 1rem);
   flex-wrap: wrap;
-  margin-top: 1rem;
+  margin-top: 0;
 }
 
 .hero .btn {
@@ -81,19 +82,88 @@
 /* ===========================
    📌 BREAKPOINTS - RESPONSIVIDADE
 =========================== */
+
+/* ===========================
+   📌 BREAKPOINT: ≥768px (Tablets)
+=========================== */
 @media (min-width: 768px) {
-  .hero {
-    flex-direction: row;
-    text-align: left;
-    justify-content: space-between;
+  body {
+    font-size: 1.05rem;
+    padding: 2rem 3rem;
   }
 
-  .hero-content {
-    flex: 1;
-    max-width: 50%;
+  .hero h1 {
+    text-align: left;
+  }
+
+  .hero .subtitle {
+    text-align: left;
+  }
+
+  .hero .btn {
+    padding: clamp(0.6rem, 1.2vw, 0.75rem) clamp(3.25rem, 4vw, 4.75rem);
+    font-size: 1.1em;
+    
+  }
+}
+
+
+/* ===========================
+   📌 BREAKPOINT: ≥1024px (Tablets paisagem / Notebooks pequenos)
+=========================== */
+@media (min-width: 1024px) {
+  body {
+    font-size: 1.1rem;
+    padding: 1rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .hero {
+    flex-direction: row;
+    align-items: center;
+    
+    
   }
 
   .hero-container-imagem {
-    margin-left: 2rem;
+    width: 55%;
+    height: auto;
+    margin-top: 0;
+  }
+
+  .hero p {
+    max-width: 1200px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: row;
+  }
+
+    .hero .btn {
+    padding: clamp(0.4rem, 0.8vw, 0.5rem) clamp(1.8rem, 2.2vw, 2.7rem);
+    
+    
+  }
+}
+
+/* ===========================
+   📌 BREAKPOINT: ≥1280px (Laptops / Desktops médios)
+=========================== */
+@media (min-width: 1280px) {
+  body {
+    font-size: 1.15rem;
+    padding: 3rem 5rem;
+  }
+}
+
+/* ===========================
+   📌 BREAKPOINT: ≥1440px (Desktops grandes)
+=========================== */
+@media (min-width: 1440px) {
+  body {
+    font-size: 1.2rem;
+    padding: 4rem 6rem;
   }
 }
