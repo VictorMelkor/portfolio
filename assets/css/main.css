@@ -99,7 +99,7 @@ body {
   background: none;
   color: var(--color-bg-alt);
   border: none;
-  padding: var(--spacing-sm) clamp(1rem, 2vw, 2rem);
+  padding: clamp(0.4rem, 0.8vw, 0.4rem) clamp(1rem, 2vw, 1.2rem);
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease;

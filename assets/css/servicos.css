@@ -94,9 +94,13 @@
     background: var(--color-purple-dark);
     border-radius: 15px;
     padding: clamp(1rem, 1vw + 0.5rem, 1.5rem) clamp(1rem, 2vw, 1.2rem);
+    padding-bottom: 3.5rem;   /* 🔥 adiciona espaço para o preço */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     color: #fff;
     cursor: default;
+    position: relative;
+    overflow: visible;
+    margin-bottom: 3rem;     /* 🔥 garante espaçamento entre os planos */
 }
 
 .plano h3 {
@@ -106,17 +110,34 @@
     font-size: clamp(1.1rem, 1vw + 0.5rem, 1.4rem);
 }
 
-.plano p {
-    font-size: clamp(0.9rem, 0.5vw + 0.5rem, 1rem);
-    line-height: 1.4;
-    margin-bottom: 1rem;
-    color: rgba(255, 255, 255, 0.85);
-}
+
 
 .preco {
     font-size: clamp(1.1rem, 1vw + 0.7rem, 1.3rem);
     font-weight: 700;
-    color: var(--color-pink-light);
+    background-color: var(--color-pink-light);
+    padding: 0.8em 1.2em;
+    width: fit-content;
+    border-radius: 8px;
+    position: absolute;
+    bottom: -20px;          /* 🔥 ajustado para não sobrepor o texto */
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);  /* 🔥 sombra para destaque */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 80%;
+}
+
+/* 🔥 efeito no hover do preço */
+.preco:hover {
+    transform: translateX(-50%) scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+.preco p {
+    font-size: clamp(0.9rem, 0.5vw + 0.5rem, 1rem);
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.85);
 }
 
 /* ===========================
