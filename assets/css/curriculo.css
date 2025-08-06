@@ -26,7 +26,7 @@
     flex-direction: column;
     padding: clamp(1.5rem, 2vw, 2.5rem) clamp(1rem, 2vw, 1.5rem);
     text-align: left;
-    background-color: var(--color-bg-alt);
+    background-color: var(--color-bg);
 }
 
 .curriculo article,
@@ -90,7 +90,7 @@
    SOFT SKILLS
 =========================== */
 .soft-skills {
-    background-color: var(--color-purple-dark);
+   
     border-radius: 20px;
     padding: clamp(1rem, 1.5vw, 1.5rem);
     margin-top: clamp(1.5rem, 2vw, 2.5rem);

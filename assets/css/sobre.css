@@ -1,11 +1,16 @@
 /* ===========================
    🔹 SOBRE - MOBILE FIRST
 =========================== */
-.sobre {
+.sobre, .valores{
     display: flex;
     flex-direction: column;
     padding: clamp(1.5rem, 2vw, 2.5rem) clamp(1rem, 2vw, 1.5rem);
     text-align: center;
+    background-color: var(--color-bg-alt);
+}
+
+.valores {
+    background-color: var(--color-bg);
 }
 
 /* Parágrafos da seção sobre */
@@ -70,6 +75,65 @@
     line-height: 1.5;
     margin: 0;
 }
+
+/* ===========================
+   VALORES - MESMO PADRÃO SERVIÇOS
+=========================== */
+.valores {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.valor-card {
+    background: var(--color-purple-dark);
+    padding: 1.5rem;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Ícones */
+.valor-card i {
+    font-size: 2.5rem;
+    color: var(--color-pink-light);
+    margin-bottom: 1rem;
+}
+
+/* Título */
+.valor-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+/* Texto */
+.valor-card p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Hover (para desktop) */
+.valor-card:hover {
+    transform: translateY(-5px);
+    background: var(--color-purple);
+}
+
+/* Responsivo - em telas maiores, lado a lado */
+@media (min-width: 768px) {
+    .valores {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .valor-card {
+        flex: 1;
+        max-width: 32%;
+    }
+}
+
 
 /* ===========================
    📌 BREAKPOINTS - RESPONSIVIDADE

@@ -31,7 +31,8 @@
 .portfolio-grid {
     display: flex;
     flex-direction: column;
-    gap: clamp(1rem, 2vw, 2rem);
+    gap: clamp(2rem, 2vw, 2rem);
+    padding: 2em 0 0 0;
 }
 
 /* Card do projeto */
@@ -121,6 +122,22 @@
 /* Transição suave ao filtrar */
 .portfolio-card {
     transition: opacity 0.3s ease-in-out;
+}
+
+.filter-btn {
+    background-color: var(--color-bg-alt);
+    border: none;
+    padding: 0.5em 0.8em;
+    margin: 0.5em 0.5em ;
+    border-radius: 5px;
+    font-family: var(--font-family-base);
+}
+
+.filter-btn:hover {
+    background-color: var(--color-purple-dark);
+    transform: translateY(-5px);
+    transition: 0.5s ease;
+    
 }
 
 /* ===========================
