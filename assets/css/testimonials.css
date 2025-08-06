@@ -2,34 +2,70 @@
    🔹 TESTIMONIALS - MOBILE FIRST
 =========================== */
 .testimonials {
-    display: flex;
-    flex-direction: column;
+        width: 100vw;
+    margin-left: calc(-50vw + 50%);
     background-color: var(--color-bg-alt);
-    padding: clamp(1.5rem, 2vw, 2.5rem) clamp(1rem, 2vw, 1.5rem);
+    padding: clamp(1.5rem, 2vw, 2.5rem) clamp(1rem, 4vw, 2rem);
     text-align: center;
+    overflow: hidden;
 }
 
-/* Card individual do depoimento */
-.testimonial1 {
+.testimonials .subtitle {
+    color: var(--color-pink-light);
+    font-size: clamp(1.2rem, 1.5vw, 1.8rem);
+    margin-bottom: clamp(0.8rem, 1vw, 1rem);
+}
+
+
+.testimonials p {
+    margin-bottom: 2em;
+}
+
+/* Swiper container */
+.testimonials-swiper {
+    width: 100%;
+    padding: 1rem 0;
+    box-sizing: border-box;
+}
+
+/* Wrapper e slides */
+.swiper-wrapper {
+    display: flex;
+    align-items: stretch;
+    
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0 clamp(0.75rem, 3vw, 1.5rem);
+    height: auto;
+}
+
+/* Card individual */
+.testimonial-card {
     background-color: var(--color-purple-dark);
     border-radius: clamp(15px, 2vw, 20px);
     padding: clamp(1rem, 1.5vw, 1.5rem);
-    max-width: 350px;
-    margin: clamp(0.5rem, 1vw, 1rem) auto;
+    width: 100%;
+    max-width: 600px;
     display: flex;
     flex-direction: column;
     gap: clamp(0.75rem, 1vw, 1rem);
+    box-sizing: border-box;
 }
 
-/* Header do testimonial (imagem + info) */
-.testimonial1-header {
+/* Header do testimonial */
+.testimonial-header {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: clamp(0.75rem, 1vw, 1rem);
+    flex-wrap: wrap;
 }
 
-/* Imagem redonda com gradiente */
+/* Imagem com gradiente */
 .img-gradient {
     background: var(--gradient-secondary);
     padding: clamp(6px, 1vw, 10px);
@@ -38,59 +74,77 @@
 }
 
 .img-gradient img,
-.testimonial1-img {
+.testimonial-img {
     border-radius: 50%;
     display: block;
     object-fit: cover;
-    width: clamp(60px, 7vw, 80px);
-    height: clamp(60px, 7vw, 80px);
+    width: clamp(200px, 7vw, 200px);
+    height: clamp(200px, 7vw, 200px);
 }
 
-/* Bloco de informações (badge, nome, site) */
-.testimonial1-info {
+/* Info do testimonial */
+.testimonial-info {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: clamp(0.15rem, 0.5vw, 0.3rem);
     text-align: left;
 }
 
-/* Badge do papel/posição */
-.testimonial1-role {
+/* Badge do papel */
+.testimonial-role {
     background-color: var(--color-pink-light);
     color: #fff;
     border-radius: clamp(15px, 2vw, 20px);
-    font-size: clamp(1rem, 1.3vw, 1.3em);
+    font-size: clamp(1.2rem, 1.3vw, 1.3em);
     padding: clamp(0.2em, 0.5vw, 0.3em) clamp(0.5em, 1vw, 0.8em) clamp(0.1em, 0.3vw, 0.15em);
     width: fit-content;
     margin: 0;
+    margin: 1rem 0 1rem 0;
     text-align: center;
 }
 
-/* Nome do depoente */
-.testimonial1-name {
+/* Nome */
+.testimonial-name {
     font-weight: bold;
-    font-size: clamp(1rem, 1.2vw, 1.2em);
+    font-size: clamp(1.2rem, 1.2vw, 1.2em);
     color: #fff;
     margin: 0;
 }
 
-/* Site ou link relacionado */
-.testimonial1-site {
-    font-size: clamp(0.55rem, 0.6vw, 0.65em);
+/* Site */
+.testimonial-site {
+    font-size: clamp(0.8rem, 0.6vw, 0.65em);
     color: #ddd;
     margin: 0;
 }
 
-.testimonial1-site a {
+.testimonial-site a {
     color: var(--color-pink-light);
     text-decoration: none;
 }
 
-/* Texto do depoimento */
-.testimonial1-text {
+/* Texto */
+.testimonial-text {
     color: #fff;
-    font-size: clamp(0.7rem, 0.8vw, 0.8em);
+    font-size: clamp(1rem, 0.8vw, 0.8em);
     line-height: 1.5;
     margin: 0;
     text-align: justify;
 }
+
+/* Paginação */
+.swiper-pagination {
+    margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+    .swiper-slide {
+        margin-left: 1.5rem;
+    }
+}
+
+
+
+
+

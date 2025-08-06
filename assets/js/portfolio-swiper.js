@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 clickable: true,
             },
             slidesPerView: 1,
-            spaceBetween: 10,
+            spaceBetween: 30,
             grabCursor: true,
             // Outros parâmetros que queira adicionar:
             // autoplay: { delay: 4000, disableOnInteraction: false },

@@ -42,6 +42,9 @@
     <link rel="stylesheet" href="assets/css/curriculo.css">
     <link rel="stylesheet" href="assets/css/habilidades.css">
 
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -137,7 +140,7 @@
 
             <div class="skills-categorias">
 
-                
+
                 <!-- FRONTEND -->
                 <div class="categoria servico-card">
 
@@ -189,7 +192,7 @@
         <section class="habilidades">
             <h3 id="categoria-softskill" class="subtitle">SOFT SKILLS</h3>
             <article class="soft-skills">
-                
+
 
                 <div class="soft-skill servico-card">
                     <i class="fas fa-comments"></i>
@@ -234,49 +237,104 @@
         </section>
 
         <section class="testimonials">
+
             <h2>Clientes Felizes</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis nam enim cumque esse aliquam quis.</p>
-            <div class="testimonial1">
-                <div class="testimonial1-header">
-                    <div class="img-gradient">
-                        <img src="assets/img/testimonial1.png" class="testimonial1-img" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, alias, excepturi quisquam culpa
+                porro nam asperiores, sapiente assumenda quidem officia corporis molestias quaerat voluptates suscipit
+                minima similique exercitationem debitis. Beatae?</p>
+
+            <h3 class="subtitle">DEPOIMENTOS</h3>
+
+            <!-- Swiper container -->
+            <div class="swiper testimonials-swiper">
+                <div class="swiper-wrapper">
+
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <div class="img-gradient">
+                                    <img src="assets/img/testimonial1.png" class="testimonial-img" alt="">
+                                </div>
+                                <div class="testimonial-info">
+                                    <h5 class="testimonial-role">Fotógrafa</h5>
+                                    <h4 class="testimonial-name">Gabriela Monteiro</h4>
+                                    <p class="testimonial-site">
+                                        Site:
+                                        <a href="http://www.gabrielamonteiro.com">www.gabrielamonteiro.com</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="testimonial-text">
+                                Victor foi muito solícito, cuidando inclusive dos menores detalhes do projeto.
+                                Tudo foi entregue antes do prazo, mostrando agilidade e comprometimento.
+                                Estou muito satisfeita e recomendo seu trabalho a todos que buscam profissionalismo e
+                                dedicação.
+                            </p>
+                        </div>
                     </div>
-                    <div class="testimonial1-info">
-                        <h5 class="testimonial1-role">Psicóloga</h5>
-                        <h4 class="testimonial1-name">Julia Travassos</h4>
-                        <p class="testimonial1-site">Site: <a
-                                href="http://www.juliatravassos.com">www.juliatravassos.com</a></p>
+
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <div class="img-gradient">
+                                    <img src="assets/img/testimonial1.png" class="testimonial-img" alt="">
+                                </div>
+                                <div class="testimonial-info">
+                                    <h5 class="testimonial-role">Fotógrafa</h5>
+                                    <h4 class="testimonial-name">Gabriela Monteiro</h4>
+                                    <p class="testimonial-site">
+                                        Site:
+                                        <a href="http://www.gabrielamonteiro.com">www.gabrielamonteiro.com</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="testimonial-text">
+                                Victor foi muito solícito, cuidando inclusive dos menores detalhes do projeto.
+                                Tudo foi entregue antes do prazo, mostrando agilidade e comprometimento.
+                                Estou muito satisfeita e recomendo seu trabalho a todos que buscam profissionalismo e
+                                dedicação.
+                            </p>
+                        </div>
                     </div>
+
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <div class="img-gradient">
+                                    <img src="assets/img/testimonial1.png" class="testimonial-img" alt="">
+                                </div>
+                                <div class="testimonial-info">
+                                    <h5 class="testimonial-role">Fotógrafa</h5>
+                                    <h4 class="testimonial-name">Gabriela Monteiro</h4>
+                                    <p class="testimonial-site">
+                                        Site:
+                                        <a href="http://www.gabrielamonteiro.com">www.gabrielamonteiro.com</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="testimonial-text">
+                                Victor foi muito solícito, cuidando inclusive dos menores detalhes do projeto.
+                                Tudo foi entregue antes do prazo, mostrando agilidade e comprometimento.
+                                Estou muito satisfeita e recomendo seu trabalho a todos que buscam profissionalismo e
+                                dedicação.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Adicione mais swiper-slide conforme necessário -->
+
                 </div>
 
-                <p class="testimonial1-text">
-                    Victor foi muito solícito, cuidando inclusive dos menores detalhes do projeto.
-                    Tudo foi entregue antes do prazo, mostrando agilidade e comprometimento.
-                    Estou muito satisfeita e recomendo seu trabalho a todos que buscam profissionalismo e dedicação.
-                </p>
+                <!-- Paginação -->
+                <div class="swiper-pagination"></div>
             </div>
-
-            <div class="testimonial1">
-                <div class="testimonial1-header">
-                    <div class="img-gradient">
-                        <img src="assets/img/testimonial1.png" class="testimonial1-img" alt="">
-                    </div>
-                    <div class="testimonial1-info">
-                        <h5 class="testimonial1-role">Fotógrafa</h5>
-                        <h4 class="testimonial1-name">Gabriela Monteiro</h4>
-                        <p class="testimonial1-site">Site: <a
-                                href="http://www.juliatravassos.com">www.gabrielamonteiro.com</a></p>
-                    </div>
-                </div>
-
-                <p class="testimonial1-text">
-                    Victor foi muito solícito, cuidando inclusive dos menores detalhes do projeto.
-                    Tudo foi entregue antes do prazo, mostrando agilidade e comprometimento.
-                    Estou muito satisfeita e recomendo seu trabalho a todos que buscam profissionalismo e dedicação.
-                </p>
-            </div>
-
         </section>
+
+
+
 
         <section class="blog">
             <h3 class="subtitle">NOVIDADES</h3>
@@ -345,11 +403,13 @@
     </main>
 
 
-
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <!-- JS do controle de tema -->
     <script src="assets/js/theme.js"></script>
     <script src="assets/js/menu.js"></script>
     <script src="assets/js/habilidades.js"></script>
+    <script src="assets/js/testimonials-swiper.js"></script>
 
 </body>
 
