@@ -5,7 +5,7 @@ nav {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;   /* ✅ centraliza conteúdo */
+  justify-content: center;
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
@@ -15,7 +15,7 @@ nav {
   border-radius: 50px;
   gap: 1rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
-  flex-wrap: wrap;           /* ✅ permite quebra sem overflow */
+  flex-wrap: wrap;
 }
 
 /* Logo */
@@ -27,7 +27,6 @@ nav {
   font-weight: 700;
   flex-shrink: 0;
   font-size: clamp(1.2rem, 2vw, 1.5rem);
-  
 }
 
 /* ===========================
@@ -64,28 +63,31 @@ nav .pill {
 }
 
 /* ===========================
-   🔹 MENU DE LINKS
+   🔹 MENU DE LINKS (MOBILE: OFF-CANVAS)
 =========================== */
 .nav-links {
-  display: none;
+  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background: var(--color-bg-alt);
-  width: clamp(180px, 20vw, 220px);
-  border-radius: 8px;
-  padding: clamp(0.8rem, 1.5vw, 1rem);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.18);
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100vh;
+  width: 240px;
+  background-color: var(--color-bg-alt);
+  padding: 2rem 1.5rem;
+  box-shadow: -2px 0 12px rgba(0, 0, 0, 0.25);
+  z-index: 100;
+  gap: 1rem;
+  border-radius: 0;
+  transition: right 0.3s ease;
+  overflow-y: auto;
 }
 
 .nav-links.open {
-  display: flex;
-  z-index: 1;
+  right: 0;
   background-color: var(--color-purple-dark);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);  
 }
 
 .nav-links a {
@@ -97,6 +99,7 @@ nav .pill {
   border-radius: 50px;
   transition: color 0.3s ease, background 0.3s ease;
   font-size: clamp(0.9rem, 1.2vw, 1rem);
+  width: 100%;
 }
 
 .nav-links a:hover {
@@ -106,13 +109,11 @@ nav .pill {
 .nav-links a.active {
   background-color: var(--color-pink);
   color: #fff;
-  
 }
 
 /* =======================================
    📌 BREAKPOINTS - RESPONSIVIDADE
 ======================================= */
-
 
 /* ===========================
    📌 BREAKPOINT: ≥768px (Tablets)
@@ -128,20 +129,23 @@ nav .pill {
     margin: 0 auto;
     padding: 0.8rem clamp(1rem, 2vw, 2rem);
     justify-content: center;
-    flex-wrap: nowrap; /* 🔹 impede quebra de linha */
-    overflow-x: auto;  /* 🔹 garante que não estoure, adiciona scroll se necessário */
+    flex-wrap: nowrap;
+    overflow-x: auto;
   }
 
   .nav-links {
-    display: flex;
+    display: flex !important;
     flex-direction: row;
     position: static;
     background: transparent;
     box-shadow: none;
     width: auto;
     padding: 0;
-    gap: clamp(0.3rem, 0.8vw, 0.8rem); /* 🔹 gap menor para caber */
-    flex-wrap: nowrap; /* 🔹 impede quebra */
+    gap: clamp(0.3rem, 0.8vw, 0.8rem);
+    flex-wrap: nowrap;
+    height: auto;
+    right: auto;
+    top: auto;
   }
 
   .logo {
@@ -180,4 +184,3 @@ nav .pill {
     padding: 4rem 6rem;
   }
 }
-
