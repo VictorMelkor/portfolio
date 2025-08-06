@@ -2,12 +2,16 @@
    🔹 ESPECIALIDADES - MOBILE FIRST
 =========================== */
 .especialidades {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    /* anula o centramento de containers */
     background-color: var(--color-bg-alt);
     padding: clamp(1.5rem, 2vw, 2.5rem) clamp(1rem, 2vw, 1.5rem);
-    margin-top: clamp(1.5rem, 2vw, 2.5rem);
+    margin-top: clamp(1rem, 2vw, 2rem);
     text-align: center;
     color: rgba(255, 255, 255, 0.8);
 }
+
 
 .especialidades p {
     max-width: clamp(280px, 50vw, 600px);
@@ -25,6 +29,8 @@
 
 /* Card de cada especialidade */
 .servico-card {
+    flex-direction: column;
+    align-items: center;
     background: var(--color-purple-dark);
     border-radius: 15px;
     padding: clamp(0.8rem, 1vw, 1.2rem) clamp(0.8rem, 1.5vw, 1rem);
@@ -37,6 +43,7 @@
     font-size: clamp(1.5rem, 2vw, 2rem);
     color: var(--color-pink-light);
     margin-bottom: 0.5rem;
+
 }
 
 .servico-card h4 {
@@ -65,8 +72,20 @@
     margin-top: clamp(1.5rem, 2vw, 2.5rem);
     text-align: center;
     color: rgba(255, 255, 255, 0.8);
-    
-    
+}
+
+.hard-skills-index .subtitle {
+        color: var(--color-pink-light);
+    text-align: center;
+    margin-bottom: clamp(0.8rem, 1vw, 1rem);
+}
+
+#categoria-hardskill {
+    margin: 4em 0 1em 0;
+}
+
+#categoria-softskill {
+    margin: 4em 0 -1em 0;
 }
 
 .hard-skills p {
@@ -78,7 +97,9 @@
 .skills-categorias {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: clamp(1.5rem, 2vw, 2rem);
+    
 }
 
 /* Títulos das categorias */
@@ -148,7 +169,7 @@
     .skills-categorias {
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
     }
 
     .categoria {

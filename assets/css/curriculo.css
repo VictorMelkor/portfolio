@@ -8,6 +8,7 @@
     text-align: left;
 }
 
+.especialidades .subtitle,
 .curriculo .subtitle,
 .habilidades .subtitle,
 .hard-skills .subtitle,
@@ -73,7 +74,8 @@
 .progress {
     background: linear-gradient(90deg, var(--color-pink-light), var(--color-indigo));
     height: 100%;
-    width: 0; /* começa vazia */
+    width: 0;
+    /* começa vazia */
     border-radius: 10px;
     transition: width 1.2s ease;
 }
@@ -90,17 +92,20 @@
    SOFT SKILLS
 =========================== */
 .soft-skills {
-   
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     border-radius: 20px;
     padding: clamp(1rem, 1.5vw, 1.5rem);
+    gap: clamp(1.5rem, 2vw, 2rem);
     margin-top: clamp(1.5rem, 2vw, 2.5rem);
 }
 
 /* bloco individual */
 .soft-skill {
-    display: flex;
     align-items: flex-start;
-    gap: clamp(0.5rem, 1vw, 1rem);
+    gap: clamp(1.5rem, 2vw, 2rem);
     margin-bottom: clamp(0.8rem, 1vw, 1rem);
 }
 

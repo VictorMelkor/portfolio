@@ -30,12 +30,32 @@
     cursor: pointer;
 }
 
+
 /* ===========================
    📌 BREAKPOINTS - RESPONSIVIDADE
 =========================== */
+
+/* ===========================
+   📌 BREAKPOINT: ≥768px (Tablets)
+=========================== */
 @media (min-width: 768px) {
     .experience {
-        padding: clamp(2.5rem, 3vw, 4rem) clamp(2rem, 3vw, 3rem);
-        text-align: left;
+        width: 100% !important;
     }
 }
+
+
+/* ===========================
+   📌 BREAKPOINT: ≥1024px (Tablets paisagem / Notebooks pequenos)
+=========================== */
+@media (min-width: 1024px) {}
+
+/* ===========================
+   📌 BREAKPOINT: ≥1280px (Laptops / Desktops médios)
+=========================== */
+@media (min-width: 1280px) {}
+
+/* ===========================
+   📌 BREAKPOINT: ≥1440px (Desktops grandes)
+=========================== */
+@media (min-width: 1440px) {}
