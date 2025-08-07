@@ -2,19 +2,24 @@ const swiper = new Swiper('.testimonials-swiper', {
     slidesPerView: 1,
     spaceBetween: 20,
     loop: true,
-    speed: 2000, // Duração da transição em ms (1 segundo neste exemplo)
+    speed: 2000,
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
     },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
     autoplay: {
-        delay: 3000, // Tempo entre transições (3 segundos)
+        delay: 3000,
         pauseOnMouseEnter: true,
         disableOnInteraction: false,
+        loop: true
     },
     breakpoints: {
         1024: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 24,
         },
         1440: {

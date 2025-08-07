@@ -20,7 +20,7 @@
     width: 100%;
     height: auto;
     border-radius: clamp(12px, 1vw, 20px);
-    display: block;
+    display: none;
     /* remove espaços embaixo da imagem */
     object-fit: cover;
     /* para manter proporção ao preencher o container */

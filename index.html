@@ -29,6 +29,9 @@
     <!-- Favicon -->
     <link rel="icon" href="assets/img/favicon.png" type="image/png">
 
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <!-- CSS principal -->
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/main.css">
@@ -42,8 +45,7 @@
     <link rel="stylesheet" href="assets/css/curriculo.css">
     <link rel="stylesheet" href="assets/css/habilidades.css">
 
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -258,7 +260,7 @@
                                 </div>
                                 <div class="testimonial-info">
                                     <h5 class="testimonial-role">Fotógrafa</h5>
-                                    <h4 class="testimonial-name">Gabriela Monteiro</h4>
+                                    <h4 class="testimonial-name">Gabriela</h4>
                                     <p class="testimonial-site">
                                         Site:
                                         <a href="http://www.gabrielamonteiro.com">www.gabrielamonteiro.com</a>
@@ -283,7 +285,7 @@
                                 </div>
                                 <div class="testimonial-info">
                                     <h5 class="testimonial-role">Fotógrafa</h5>
-                                    <h4 class="testimonial-name">Gabriela Monteiro</h4>
+                                    <h4 class="testimonial-name">Gui</h4>
                                     <p class="testimonial-site">
                                         Site:
                                         <a href="http://www.gabrielamonteiro.com">www.gabrielamonteiro.com</a>
@@ -308,7 +310,57 @@
                                 </div>
                                 <div class="testimonial-info">
                                     <h5 class="testimonial-role">Fotógrafa</h5>
-                                    <h4 class="testimonial-name">Gabriela Monteiro</h4>
+                                    <h4 class="testimonial-name">Ber</h4>
+                                    <p class="testimonial-site">
+                                        Site:
+                                        <a href="http://www.gabrielamonteiro.com">www.gabrielamonteiro.com</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="testimonial-text">
+                                Victor foi muito solícito, cuidando inclusive dos menores detalhes do projeto.
+                                Tudo foi entregue antes do prazo, mostrando agilidade e comprometimento.
+                                Estou muito satisfeita e recomendo seu trabalho a todos que buscam profissionalismo e
+                                dedicação.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <div class="img-gradient">
+                                    <img src="assets/img/testimonial1.png" class="testimonial-img" alt="">
+                                </div>
+                                <div class="testimonial-info">
+                                    <h5 class="testimonial-role">Fotógrafa</h5>
+                                    <h4 class="testimonial-name">Victor</h4>
+                                    <p class="testimonial-site">
+                                        Site:
+                                        <a href="http://www.gabrielamonteiro.com">www.gabrielamonteiro.com</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="testimonial-text">
+                                Victor foi muito solícito, cuidando inclusive dos menores detalhes do projeto.
+                                Tudo foi entregue antes do prazo, mostrando agilidade e comprometimento.
+                                Estou muito satisfeita e recomendo seu trabalho a todos que buscam profissionalismo e
+                                dedicação.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <div class="img-gradient">
+                                    <img src="assets/img/testimonial1.png" class="testimonial-img" alt="">
+                                </div>
+                                <div class="testimonial-info">
+                                    <h5 class="testimonial-role">Fotógrafa</h5>
+                                    <h4 class="testimonial-name">Julia</h4>
                                     <p class="testimonial-site">
                                         Site:
                                         <a href="http://www.gabrielamonteiro.com">www.gabrielamonteiro.com</a>
@@ -330,6 +382,8 @@
 
                 <!-- Paginação -->
                 <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </section>
 
@@ -404,12 +458,24 @@
 
 
     <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <!-- JS do controle de tema -->
     <script src="assets/js/theme.js"></script>
     <script src="assets/js/menu.js"></script>
     <script src="assets/js/habilidades.js"></script>
     <script src="assets/js/testimonials-swiper.js"></script>
+
+    <script>
+        // Verifique se o Swiper carregou
+        setTimeout(() => {
+            if (typeof Swiper === 'undefined') {
+                console.error('Swiper não carregou!');
+            } else {
+                console.log('Swiper versão:', Swiper.version);
+            }
+        }, 1000);
+    </script>
 
 </body>
 

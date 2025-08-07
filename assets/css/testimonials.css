@@ -2,7 +2,7 @@
    🔹 TESTIMONIALS - MOBILE FIRST
 =========================== */
 .testimonials {
-        width: 100vw;
+    width: 100vw;
     margin-left: calc(-50vw + 50%);
     background-color: var(--color-bg-alt);
     padding: clamp(1.5rem, 2vw, 2.5rem) clamp(1rem, 4vw, 2rem);
@@ -16,31 +16,8 @@
     margin-bottom: clamp(0.8rem, 1vw, 1rem);
 }
 
-
 .testimonials p {
     margin-bottom: 2em;
-}
-
-/* Swiper container */
-.testimonials-swiper {
-    width: 100%;
-    padding: 1rem 0;
-    box-sizing: border-box;
-}
-
-/* Wrapper e slides */
-.swiper-wrapper {
-    display: flex;
-    align-items: stretch;
-    
-}
-
-.swiper-slide {
-    display: flex;
-    justify-content: center;
-    box-sizing: border-box;
-    padding: 0 clamp(0.75rem, 3vw, 1.5rem);
-    height: auto;
 }
 
 /* Card individual */
@@ -133,18 +110,48 @@
     text-align: justify;
 }
 
-/* Paginação */
-.swiper-pagination {
-    margin-top: 1rem;
+/* Swiper container */
+.testimonials-swiper {
+    width: 100%;
+    padding: 1rem 0;
+    box-sizing: border-box;
+}
+
+/* Wrapper e slides */
+.swiper-wrapper {
+    display: flex;
+    align-items: stretch;
+
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0 clamp(0.75rem, 3vw, 1.5rem);
+    height: auto;
+    transition: all 0.4s ease;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    display: none;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    width: 27px;
+    height: 44px;
+    margin-top: -22px;
+    cursor: pointer;
+    color: #fff;
+    user-select: none;
 }
 
 @media (min-width: 768px) {
-    .swiper-slide {
-        margin-left: 1.5rem;
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: block;
     }
 }
-
-
-
-
-
