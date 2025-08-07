@@ -5,6 +5,8 @@ header {
   background-color: var(--color-bg);
     width: 100vw;
     margin-left: calc(-50vw + 50%);
+    position: fixed;
+    z-index: 9999;
     
 }
 
