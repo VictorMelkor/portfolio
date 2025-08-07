@@ -59,7 +59,7 @@
 
 /* Efeito hover */
 .servico-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-25px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -67,6 +67,8 @@
    🔹 HARD SKILLS
 =========================== */
 .hard-skills-index {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
     padding: clamp(1.5rem, 2vw, 2.5rem) clamp(1rem, 2vw, 1.5rem);
     border-radius: 0;
     margin-top: clamp(1.5rem, 2vw, 2.5rem);
@@ -81,11 +83,12 @@
 }
 
 #categoria-hardskill {
-    margin: 4em 0 1em 0;
+    margin: 2em 0 1em 0;
+    
 }
 
 #categoria-softskill {
-    margin: 4em 0 -1em 0;
+    margin: 2em 0 -1em 0;
 }
 
 .hard-skills p {
@@ -163,6 +166,10 @@
     .servico-card {
         flex: 1 1 clamp(40%, 45%, 48%);
         max-width: clamp(280px, 30vw, 300px);
+    }
+
+    .servico-card h4 {
+        text-align: center;
     }
 
     /* Hard skills: categorias lado a lado */

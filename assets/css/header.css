@@ -1,6 +1,15 @@
 /* ===========================
    🔹 NAVEGAÇÃO - MOBILE FIRST
 =========================== */
+header {
+  background-color: var(--color-bg);
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    
+}
+
+
+
 nav {
   position: relative;
   display: flex;
@@ -156,31 +165,14 @@ nav .pill {
 /* ===========================
    📌 BREAKPOINT: ≥1024px (Tablets paisagem / Notebooks pequenos)
 =========================== */
-@media (min-width: 1024px) {
-  body {
-    font-size: 1.1rem;
-    padding: 3rem 4rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-}
+
 
 /* ===========================
    📌 BREAKPOINT: ≥1280px (Laptops / Desktops médios)
 =========================== */
-@media (min-width: 1280px) {
-  body {
-    font-size: 1.15rem;
-    padding: 3rem 5rem;
-  }
-}
+
 
 /* ===========================
    📌 BREAKPOINT: ≥1440px (Desktops grandes)
 =========================== */
-@media (min-width: 1440px) {
-  body {
-    font-size: 1.2rem;
-    padding: 4rem 6rem;
-  }
-}
+
