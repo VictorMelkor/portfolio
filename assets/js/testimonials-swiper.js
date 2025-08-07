@@ -23,7 +23,7 @@ const swiper = new Swiper('.testimonials-swiper', {
             spaceBetween: 24,
         },
         1440: {
-            slidesPerView: 3,
+            slidesPerView: 2,
             spaceBetween: 32,
         }
     }
