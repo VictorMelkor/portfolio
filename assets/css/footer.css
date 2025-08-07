@@ -4,9 +4,13 @@
 .footer {
   display: flex;
   flex-direction: column;
-          width: 100vw;
-    margin-left: calc(-50vw + 50%);
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
   background-color: var(--color-bg-alt);
+  background-image: url('../img/footer_bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1;
   padding: clamp(1.5rem, 2vw, 2.5rem) clamp(1rem, 2vw, 1.5rem);
   text-align: left;
 }
@@ -16,16 +20,23 @@
   background: var(--color-purple-dark);
   color: #fff;
   margin: clamp(1em, 2vw, 1.5em) 0 clamp(2em, 3vw, 2.5em) 0;
-  padding: clamp(0.4rem, 1vw, 0.6rem) clamp(2rem, 3vw, 2.5rem);
+  padding: clamp(0.4rem, 1vw, 0.6rem) clamp(3rem, 3vw, 3rem);
   border-radius: 5px;
   font-weight: 600;
   text-decoration: none;
+  font-size: 1.2em;
   transition: background 0.3s ease, transform 0.3s ease;
 }
+
 .footer .btn:hover {
   background: var(--color-pink);
   transform: scale(0.97);
   color: var(--color-gray-light);
+}
+
+.footer-contato {
+  text-align: center;
+  padding: 1.5em 0;
 }
 
 /* Linha horizontal inset */
@@ -33,9 +44,11 @@
   border: none;
   height: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  border-top: 1px solid rgba(0, 0, 0, 0.6);
+  
   margin: clamp(1rem, 2vw, 1.5rem) 0;
 }
+
+
 
 /* Logo do footer */
 .footer-logo {
@@ -50,7 +63,7 @@
 /* Parágrafo com margem */
 .footer p {
   margin-top: clamp(1rem, 2vw, 1.5rem);
-  text-align: left;
+  text-align: justify;
   font-size: clamp(0.9rem, 1.2vw, 1rem);
 }
 
@@ -66,6 +79,7 @@
   font-size: clamp(1.2rem, 1.5vw, 1.5rem);
   transition: color 0.3s ease, transform 0.3s ease;
 }
+
 .footer-social a:hover {
   color: var(--color-pink-light);
   transform: scale(1.2);
@@ -84,6 +98,7 @@
   text-align: left;
   font-size: clamp(0.9rem, 1vw, 1rem);
 }
+
 .footer-menu a:hover {
   color: var(--color-pink-light);
 }
@@ -104,6 +119,7 @@
     justify-content: space-between;
     align-items: flex-start;
     padding: clamp(2.5rem, 3vw, 3.5rem) clamp(1.5rem, 3vw, 2rem);
+    gap: 2em;
   }
 
   .footer p,
