@@ -18,10 +18,10 @@
 
 /* Imagem responsiva com cantos arredondados */
 .blog img {
-    width: 100%;
+    width: 10%;
     height: auto;
     border-radius: clamp(12px, 1vw, 20px);
-    display: none;
+    display: flex;
     /* remove espaços embaixo da imagem */
     object-fit: cover;
     /* para manter proporção ao preencher o container */
