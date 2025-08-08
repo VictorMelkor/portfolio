@@ -1,22 +1,22 @@
-/* ===========================
-   VARIÁVEIS GLOBAIS
-=========================== */
 :root {
   /* 🎨 Cores */
-  --color-bg-dark: #141414;
-  --color-bg-alt: #22212A;
-  --color-bg-highlight: #130039;
-  --color-purple-dark: #451e94;
-  --color-purple: #6b1873;
-  --color-pink: #a73892;
-  --color-pink-light: #ff43ae;
-  --color-gray-light: #f6f6f6;
-  --color-gray-dark: #555555;
-  --color-indigo: #6b4eff;
+  --color-bg-dark: #0d1117; /* fundo principal, preto com toque azulado */
+  --color-bg-alt: #161b22; /* seções alternativas, mais claro que o principal */
+  --color-bg-highlight: #0a1a2f; /* blocos de destaque */
+  
+  --color-primary-dark: #005f73; /* azul petróleo escuro */
+  --color-primary: #2ca6a4; /* azul vibrante */
+  --color-accent: #00f5d4; /* verde água neon */
+  --color-accent-light: #5efc8d; /* verde claro suave */
+  --color-accent-dark: #00c4a7; /* versão mais escura do accent para hover/active */
+  
+  --color-gray-light: #ffffff; /* texto claro */
+  --color-gray-dark: #6b7280; /* cinza intermediário */
+  --color-indigo: #3a86ff; /* azul índigo tecnológico */
 
   /* 🌈 Gradientes */
-  --gradient-primary: linear-gradient(90deg, var(--color-purple-dark), var(--color-purple), var(--color-bg-dark));
-  --gradient-secondary: linear-gradient(90deg, #ff43ae, #7028ff);
+  --gradient-primary: linear-gradient(90deg, var(--color-primary-dark), var(--color-primary), var(--color-bg-dark));
+  --gradient-secondary: linear-gradient(90deg, var(--color-accent), var(--color-indigo));
 
   /* 🖋 Tipografia */
   --font-family-base: 'Poppins', sans-serif;
@@ -35,7 +35,6 @@
   --spacing-sm: clamp(0.5rem, 1vw, 1rem);
   --spacing-md: clamp(1rem, 2vw, 2rem);
   --spacing-lg: clamp(1.5rem, 3vw, 3rem);
-
 }
 
 /* 🌞 Tema claro automático */
@@ -43,28 +42,28 @@
   :root {
     --color-bg-dark: #f6f6f6;
     --color-bg-alt: #e0e0e0;
-    --color-bg-highlight: #e0e0e0;
+    --color-bg-highlight: #d9d9d9;
     --color-gray-light: #141414;
     --color-gray-dark: #555;
-    --gradient-primary: linear-gradient(90deg, var(--color-purple), var(--color-purple-dark), #f6f6f6);
-    --gradient-secondary: linear-gradient(90deg, var(--color-purple), var(--color-purple-dark), var(--color-pink));
+    --gradient-primary: linear-gradient(90deg, var(--color-primary-dark), var(--color-primary), #f6f6f6);
+    --gradient-secondary: linear-gradient(90deg, var(--color-accent), var(--color-indigo));
   }
 }
 
 /* 🔥 Overrides manuais para tema */
 html.dark {
   --color-bg: var(--color-bg-dark);
-  --color-text: #fff;
-  --color-accent-1: var(--color-pink);
-  --color-accent-2: var(--color-pink-light);
-  --color-muted: var(--color-gray-light);
+  --color-text: var(--color-gray-light);
+  --color-accent-1: var(--color-accent);
+  --color-accent-2: var(--color-accent-light);
+  --color-muted: var(--color-gray-dark);
 }
 
 html.light {
   --color-bg: #f6f6f6;
   --color-text: #141414;
-  --color-accent-1: var(--color-purple);
-  --color-accent-2: var(--color-pink);
+  --color-accent-1: var(--color-accent);
+  --color-accent-2: var(--color-accent-light);
   --color-muted: var(--color-gray-dark);
 }
 
@@ -92,11 +91,9 @@ body {
 
 main {
   background-color: var(--color-bg-alt);
-      width: 100vw;
-    margin-left: calc(-50vw + 50%);
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
 }
-
-
 
 /* Containers */
 .container {
@@ -110,7 +107,7 @@ main {
 #theme-toggle {
   background: none;
   color: var(--color-bg-alt);
-  border: 1px solid var(--color-text);
+  border: none;
   padding: clamp(0.4rem, 0.8vw, 0.4rem) clamp(1rem, 2vw, 1.2rem);
   border-radius: 50px;
   cursor: pointer;
@@ -119,7 +116,7 @@ main {
 }
 
 #theme-toggle:hover {
-  background: var(--color-pink-light);
+  background: var(--color-indigo);
   color: #fff;
   border: 1px solid var(--color-bg);
 }
@@ -140,7 +137,9 @@ h2 {
 h3 {
   font-size: var(--font-size-h3);
   margin-bottom: var(--spacing-xs);
+  color: var(--color-primary);
 }
+
 
 /* ===========================
    BREAKPOINTS
@@ -174,7 +173,3 @@ h3 {
     --font-size-h3: 1.8rem;
   }
 }
-
-
-
-

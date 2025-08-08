@@ -13,12 +13,8 @@ header {
 
   /* sombra clara e difusa para destacar no fundo preto */
   box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05),
-              0 2px 20px rgba(0, 0, 0, 0.6);
+    0 2px 20px rgba(0, 0, 0, 0.6);
 }
-
-
-
-
 
 nav {
   position: relative;
@@ -34,14 +30,14 @@ nav {
   border-radius: 50px;
   gap: 1rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6),
-            0 0 8px rgba(100, 100, 255, 0.1);
+    0 0 8px rgba(100, 100, 255, 0.1);
 
   flex-wrap: wrap;
 }
 
 /* Logo */
 .logo {
-  background-color: var(--color-purple-dark);
+  background-color: var(--color-primary-dark);
   border-radius: 50%;
   padding: 0.3em 0.4em 0.3em 0.3em;
   margin-left: -0.4em;
@@ -68,20 +64,6 @@ nav {
   transform: rotate(90deg);
 }
 
-/* ===========================
-   🔹 PILL ANIMADO (Indicador ativo)
-=========================== */
-nav .pill {
-  position: absolute;
-  top: 10px;
-  left: 0;
-  background-color: var(--color-pink);
-  border-radius: 50px;
-  z-index: 0;
-  transition: all 0.3s ease;
-  pointer-events: none;
-  transform: translateZ(0);
-}
 
 /* ===========================
    🔹 MENU DE LINKS (MOBILE: OFF-CANVAS)
@@ -108,7 +90,7 @@ nav .pill {
 
 .nav-links.open {
   right: 0;
-  background-color: var(--color-purple-dark);
+  background-color: var(--color-primary-dark);
 }
 
 .nav-links a {
@@ -124,11 +106,11 @@ nav .pill {
 }
 
 .nav-links a:hover {
-  background-color: var(--color-indigo);
+  background-color: var(--color-primary);
 }
 
 .nav-links a.active {
-  background-color: var(--color-pink);
+  background-color: var(--color-primary);
   color: #fff;
 }
 
@@ -177,7 +159,16 @@ nav .pill {
 /* ===========================
    📌 BREAKPOINT: ≥1024px (Tablets paisagem / Notebooks pequenos)
 =========================== */
+@media (min-width: 1024px) {
+  .nav-links a:hover {
+  background-color: var(--color-primary);
+}
 
+.nav-links a.active {
+  background-color: var(--color-primary-dark);
+  color: #fff;
+}
+}
 
 /* ===========================
    📌 BREAKPOINT: ≥1280px (Laptops / Desktops médios)
@@ -187,4 +178,3 @@ nav .pill {
 /* ===========================
    📌 BREAKPOINT: ≥1440px (Desktops grandes)
 =========================== */
-

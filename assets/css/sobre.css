@@ -6,7 +6,7 @@
     flex-direction: column;
     padding: clamp(1.5rem, 2vw, 2.5rem) clamp(1rem, 2vw, 1.5rem);
     text-align: center;
-    background-color: var(--color-bg-alt);
+    background-color: var(--color-bg);
 }
 
 .valores {
@@ -22,7 +22,6 @@
 
 /* Subtítulo com cor destaque */
 .sobre .subtitle {
-    color: var(--color-pink-light);
     font-size: clamp(1.1rem, 1.5vw, 1.4rem);
 }
 
@@ -87,7 +86,7 @@
 }
 
 .valor-card {
-    background: var(--color-purple-dark);
+    background: var(--color-primary-dark);
     padding: 1.5rem;
     border-radius: 20px;
     text-align: center;
@@ -97,7 +96,7 @@
 /* Ícones */
 .valor-card i {
     font-size: 2.5rem;
-    color: var(--color-pink-light);
+    color: var(--color-text);
     margin-bottom: 1rem;
 }
 
@@ -105,12 +104,12 @@
 .valor-card h4 {
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
-    color: #fff;
+    color: var(--color-text);
 }
 
 /* Texto */
 .valor-card p {
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--color-text);
     font-size: 1rem;
     line-height: 1.5;
 }
@@ -118,7 +117,7 @@
 /* Hover (para desktop) */
 .valor-card:hover {
     transform: translateY(-5px);
-    background: var(--color-purple);
+    background: var(--color-primary);
 }
 
 /* Responsivo - em telas maiores, lado a lado */

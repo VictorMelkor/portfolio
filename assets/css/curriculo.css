@@ -14,7 +14,7 @@
 .hard-skills .subtitle,
 .soft-skills .subtitle,
 .curriculo-profissional .subtitle {
-    color: var(--color-pink-light);
+    
     text-align: center;
     margin-bottom: clamp(0.8rem, 1vw, 1rem);
 }

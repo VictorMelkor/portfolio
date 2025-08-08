@@ -10,7 +10,7 @@
 }
 
 .blog .subtitle {
-    color: var(--color-pink-light);
+    
     margin-bottom: clamp(0.75rem, 1.5vw, 1rem);
     /* espaçamento para separar do conteúdo */
     font-size: clamp(1rem, 1.5vw, 1.25rem);

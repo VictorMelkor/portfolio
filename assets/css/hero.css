@@ -24,13 +24,13 @@
   font-size: clamp(1rem, 1.5vw, 1.3rem);
   max-width: 400px;
   margin: auto;
-  color: var(--color-muted);
+  color: var(--color-text);
   text-align: center;
 }
 
 /* Subtítulo destacado */
 .hero .subtitle {
-  color: var(--color-pink-light);
+  color: var(--color-primary);
   font-size: clamp(1.5rem, 2vw, 1.8rem);
   margin: auto;
   text-align: center;
@@ -57,7 +57,7 @@
 }
 
 .hero .btn {
-  background: var(--color-purple-dark);
+  background: var(--color-primary-dark);
   color: #fff;
   margin: 1rem 0 -1rem 0;
   padding: clamp(0.4rem, 0.8vw, 0.5rem) clamp(1.5rem, 2vw, 2.5rem);
@@ -74,7 +74,7 @@
 }
 
 .hero .btn:hover {
-  background: var(--color-pink);
+  background: var(--color-primary);
   transform: scale(0.97);
   color: var(--color-gray-light);
 }
