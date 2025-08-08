@@ -77,6 +77,12 @@ html.light {
   caret-color: transparent;
 }
 
+*:focus:not(:focus-visible) {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
 body {
   background: var(--color-bg);
   color: var(--color-text);
@@ -90,7 +96,7 @@ body {
 }
 
 main {
-  background-color: var(--color-bg-alt);
+  background-color: var(--color-bg);
   width: 100vw;
   margin-left: calc(-50vw + 50%);
 }
@@ -113,6 +119,7 @@ main {
   cursor: pointer;
   transition: all 0.3s ease;
   text-align: left;
+  
 }
 
 #theme-toggle:hover {

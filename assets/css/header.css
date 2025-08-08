@@ -10,7 +10,6 @@ header {
   z-index: 9999;
   padding: 1.5rem 0;
   box-sizing: border-box;
-
   /* sombra clara e difusa para destacar no fundo preto */
   box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05),
     0 2px 20px rgba(0, 0, 0, 0.6);
@@ -62,6 +61,9 @@ nav {
 
 .hamburger.active {
   transform: rotate(90deg);
+  border: none;
+  outline: none;
+  box-shadow: none;
 }
 
 
@@ -129,7 +131,7 @@ nav {
 
   nav {
     max-width: 1200px;
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
     padding: 0.8rem clamp(1rem, 2vw, 2rem);
     justify-content: center;
@@ -162,13 +164,13 @@ nav {
 =========================== */
 @media (min-width: 1024px) {
   .nav-links a:hover {
-  background-color: var(--color-primary);
-}
+    background-color: var(--color-primary);
+  }
 
-.nav-links a.active {
-  background-color: var(--color-primary-dark);
-  color: #fff;
-}
+  .nav-links a.active {
+    background-color: var(--color-primary-dark);
+    color: #fff;
+  }
 }
 
 /* ===========================

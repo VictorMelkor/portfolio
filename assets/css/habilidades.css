@@ -4,32 +4,29 @@
 .especialidades {
     width: 100vw;
     margin-left: calc(-50vw + 50%);
-    /* anula o centramento de containers */
-    background-color: var(--color-bg-alt);
+    background-color: var(--color-bg);
     padding: clamp(1.5rem, 2vw, 2.5rem) clamp(1rem, 2vw, 1.5rem);
     margin-top: clamp(1rem, 2vw, 2rem);
     text-align: center;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--color-text);
 }
-
 
 .especialidades p {
     max-width: clamp(280px, 50vw, 600px);
     margin: 0 auto clamp(1.5rem, 2vw, 2rem);
 }
 
-
-
 /* Container de serviços */
 .servicos {
     display: flex;
     flex-direction: column;
-    gap: clamp(0.8rem, 1vw, 1.2rem);
+    gap: clamp(1.5rem, 2vw, 2rem);
 }
 
 /* Card de cada especialidade */
 .servico-card {
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     background: var(--color-primary-dark);
     border-radius: 15px;
@@ -43,7 +40,6 @@
     font-size: clamp(1.5rem, 2vw, 2rem);
     color: var(--color-gray-light);
     margin-bottom: 0.5rem;
-
 }
 
 .servico-card h4 {
@@ -64,7 +60,6 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     border: none;
-    
 }
 
 /* ===========================
@@ -81,11 +76,9 @@
     background-color: var(--color-bg);
 }
 
-
-.hard-skills-index h3 {
+#categoria-hardskill {
     padding: 2em 0;
 }
-
 
 .hard-skills p {
     max-width: clamp(280px, 50vw, 600px);
@@ -98,7 +91,6 @@
     flex-direction: column;
     justify-content: center;
     gap: clamp(1.5rem, 2vw, 2rem);
-    
 }
 
 /* Títulos das categorias */
@@ -119,7 +111,6 @@
     overflow: hidden;
 }
 
-/* Nome e % */
 .barra-skill::before {
     content: attr(data-skill) " (" attr(data-percent) "%)";
     position: absolute;
@@ -129,10 +120,8 @@
     color: var(--color-text);
     z-index: 2;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    
 }
 
-/* Preenchimento */
 .barra-skill::after {
     content: "";
     position: absolute;
@@ -144,21 +133,146 @@
     border-radius: 50px;
     transition: width 1.5s ease;
     z-index: 1;
-    
 }
 
 .habilidades {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
     text-align: center;
+}
+
+.habilidades h3 {
+    text-align: center;
+}
+
+/* ===========================
+   🔹 CURRÍCULO - MOBILE FIRST
+=========================== */
+.curriculo {
+    display: flex;
+    flex-direction: column;
+    padding: clamp(1.5rem, 2vw, 2.5rem) clamp(1rem, 2vw, 1.5rem);
+    text-align: left;
+}
+
+/* ===========================
+   HABILIDADES - MOBILE FIRST
+=========================== */
+.habilidades {
+    display: flex;
+    flex-direction: column;
+    padding: clamp(1.5rem, 2vw, 2.5rem) clamp(1rem, 2vw, 1.5rem);
+    text-align: left;
+    background-color: var(--color-bg);
+}
+
+.curriculo article,
+.habilidades article,
+.profissional div {
+    padding: clamp(1.5rem, 2vw, 2.5rem) clamp(1rem, 2vw, 1.5rem);
+}
+
+/* ===========================
+   HARD SKILLS
+=========================== */
+.hard-skills {
+    background-color: var(--color-purple-dark);
+    border-radius: 20px;
+    padding: clamp(1rem, 1.5vw, 1.5rem);
+    margin-top: clamp(1.5rem, 2vw, 2.5rem);
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.5rem, 1vw, 1rem);
+    margin-bottom: clamp(0.8rem, 1vw, 1rem);
+}
+
+.skill span:first-child {
+    width: clamp(90px, 10vw, 120px);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.progress-bar {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    height: clamp(8px, 1vw, 10px);
+}
+
+.progress {
+    background: linear-gradient(90deg, var(--color-pink-light), var(--color-indigo));
+    height: 100%;
+    width: 0;
+    border-radius: 10px;
+    transition: width 1.2s ease;
+}
+
+.percent {
+    min-width: clamp(35px, 5vw, 40px);
+    text-align: right;
+    font-weight: bold;
+    font-size: clamp(0.8rem, 0.8vw, 1rem);
+}
+
+/* ===========================
+   SOFT SKILLS
+=========================== */
+.soft-skills {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 20px;
+    padding: clamp(1rem, 1.5vw, 1.5rem);
+    gap: clamp(1.5rem, 2vw, 2rem);
+    margin-top: clamp(1.5rem, 2vw, 2.5rem);
+}
+
+.soft-skill {
+    align-items: flex-start;
+    gap: clamp(1.5rem, 2vw, 2rem);
+    margin-bottom: clamp(0.8rem, 1vw, 1rem);
+}
+
+.soft-skill i {
+    font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+    color: var(--color-pink-light);
+    flex-shrink: 0;
+}
+
+.soft-skill h4 {
+    margin: 0;
+    font-size: clamp(1rem, 1vw, 1.1rem);
+    color: #fff;
+}
+
+.soft-skill p {
+    margin: 0.2rem 0 0;
+    font-size: clamp(0.8rem, 0.8vw, 0.9rem);
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.4;
+}
+
+/* ===========================
+   CURRÍCULO PROFISSIONAL
+=========================== */
+.curriculo-profissional {
+    display: flex;
+    flex-direction: column;
+    padding: clamp(1.5rem, 2vw, 2.5rem) clamp(1rem, 2vw, 1.5rem);
+    text-align: left;
 }
 
 /* ===========================
    🔹 RESPONSIVIDADE
 =========================== */
-
-/* Tablet e Desktop */
 @media (min-width: 768px) {
-
-    /* Serviços: muda para grid flexível com wrap */
     .servicos {
         flex-direction: row;
         flex-wrap: wrap;
@@ -175,7 +289,6 @@
         text-align: center;
     }
 
-    /* Hard skills: categorias lado a lado */
     .skills-categorias {
         flex-direction: row;
         flex-wrap: wrap;
@@ -188,7 +301,6 @@
     }
 }
 
-/* Desktop maior */
 @media (min-width: 1024px) {
     .servico-card {
         flex: 1 1 clamp(25%, 30%, 30%);
