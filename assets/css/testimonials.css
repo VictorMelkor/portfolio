@@ -16,8 +16,14 @@
     margin-bottom: clamp(0.8rem, 1vw, 1rem);
 }
 
-.testimonials p {
-    margin-bottom: 2em;
+
+
+
+
+#descricao {
+    margin: 1em auto 2em;
+    width: 60vw;
+    text-align: center;
 }
 
 /* Card individual */
@@ -124,7 +130,7 @@
 .swiper-wrapper {
     display: flex;
     align-items: stretch;
-    
+
 
 }
 
@@ -168,12 +174,10 @@
 
     .testimonial-header {
         justify-content: space-around;
-        
+
     }
 }
 
 @media (min-width: 1440px) {
-    .testimonial-card {
-        
-    }
+    .testimonial-card {}
 }
