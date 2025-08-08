@@ -20,10 +20,7 @@
     /* alinhamento à esquerda para melhor leitura */
 }
 
-/* Subtítulo com cor destaque */
-.sobre .subtitle {
-    font-size: clamp(1.1rem, 1.5vw, 1.4rem);
-}
+
 
 /* Container geral com fundo e bordas arredondadas */
 .sobre-container {
@@ -118,6 +115,7 @@
 .valor-card:hover {
     transform: translateY(-5px);
     background: var(--color-primary);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* Responsivo - em telas maiores, lado a lado */

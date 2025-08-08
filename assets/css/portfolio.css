@@ -57,6 +57,7 @@
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
     outline: none;
     background-color: var(--color-primary);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* Container do Swiper dentro do card */
@@ -114,6 +115,7 @@
 .portfolio-card .swiper-button-prev:hover,
 .portfolio-card .swiper-button-next:hover {
     opacity: 1;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     
 }
 
@@ -145,6 +147,7 @@
     background-color: var(--color-primary);
     transform: translateY(-5px);
     transition: 0.5s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     
 }
 
@@ -184,6 +187,7 @@
 
 .btn-cta:hover {
     background: var(--color-primary);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* ===========================

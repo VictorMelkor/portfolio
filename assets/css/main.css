@@ -16,7 +16,7 @@
 
   /* 🌈 Gradientes */
   --gradient-primary: linear-gradient(90deg, var(--color-primary-dark), var(--color-primary), var(--color-bg-dark));
-  --gradient-secondary: linear-gradient(90deg, var(--color-accent), var(--color-indigo));
+  --gradient-secondary: linear-gradient(90deg, var(--color-indigo), var(--color-accent));
 
   /* 🖋 Tipografia */
   --font-family-base: 'Poppins', sans-serif;
@@ -116,7 +116,7 @@ main {
 }
 
 #theme-toggle:hover {
-  background: var(--color-indigo);
+  background: var(--color-primary);
   color: #fff;
   border: 1px solid var(--color-bg);
 }

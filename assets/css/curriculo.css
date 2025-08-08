@@ -8,16 +8,6 @@
     text-align: left;
 }
 
-.especialidades .subtitle,
-.curriculo .subtitle,
-.habilidades .subtitle,
-.hard-skills .subtitle,
-.soft-skills .subtitle,
-.curriculo-profissional .subtitle {
-    
-    text-align: center;
-    margin-bottom: clamp(0.8rem, 1vw, 1rem);
-}
 
 /* ===========================
    HABILIDADES - MOBILE FIRST
