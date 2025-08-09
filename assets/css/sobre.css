@@ -4,9 +4,15 @@
 .sobre, .valores{
     display: flex;
     flex-direction: column;
+    margin: auto;
+    max-width: 1200px;
     padding: clamp(1.5rem, 2vw, 2.5rem) clamp(1rem, 2vw, 1.5rem);
     text-align: center;
     background-color: var(--color-bg);
+}
+
+.sobre {
+    margin-top: 5em;
 }
 
 .valores {
@@ -157,5 +163,16 @@
 
     .sobre-header h3 {
         text-align: left;
+    }
+}
+
+@media (min-width: 1024px) {
+    .sobre-mim {
+        display: flex;
+        flex-direction: row;
+        gap: 3em;
+        justify-content: center;
+        padding-top: 2em;
+        
     }
 }
