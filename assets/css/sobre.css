@@ -13,10 +13,12 @@
 
 .sobre {
     margin-top: 5em;
+    
 }
 
 .valores {
     background-color: var(--color-bg);
+    margin-bottom: 5em;
 }
 
 /* Parágrafos da seção sobre */
