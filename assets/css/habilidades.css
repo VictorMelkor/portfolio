@@ -288,10 +288,13 @@
     align-items: first baseline;
     padding: 0 2em 1em 2em;
     text-align: left;
+    border: 1px solid var(--color-bg-alt);
+    margin-bottom: 1em;
 }
 
 .curriculo-profissional div {
     padding: 1em 0;
+    
 }
 
 /* ===========================
@@ -334,6 +337,10 @@
         .servico-card {
             flex: 1 1 clamp(25%, 30%, 30%);
             max-width: 280px;
+        }
+
+        .curriculo {
+            max-width: 1200px;
         }
 
         .curriculo-container {
