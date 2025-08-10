@@ -153,10 +153,13 @@
     flex-direction: column;
     margin: auto;
     margin-top: 5em;
-    padding: clamp(1.5rem, 2vw, 2.5rem) clamp(1rem, 2vw, 1.5rem);
+    padding: 2em 1em;
     text-align: center;
-    width: 1200px;
 }
+
+    .curriculo-container {
+        margin-top: 2em;
+    }
 
 
 
@@ -176,7 +179,7 @@
 .curriculo article,
 .habilidades article,
 .profissional {
-    
+    margin-top: 0;
     text-align: left;
 }
 
@@ -184,7 +187,7 @@
 .formacao,
 .idiomas {
     background-color: var(--color-bg-alt);
-    padding: 2em 2em;
+    padding: 2em 2em 2em 2em;
 }
 
 
@@ -287,6 +290,10 @@
     text-align: left;
 }
 
+.curriculo-profissional div {
+    padding: 1em 0;
+}
+
 /* ===========================
    🔹 RESPONSIVIDADE
 =========================== */
@@ -317,32 +324,37 @@
         flex: 1 1 clamp(40%, 45%, 48%);
         max-width: clamp(320px, 40vw, 400px);
     }
-}
-
-@media (min-width: 1024px) {
-    .servico-card {
-        flex: 1 1 clamp(25%, 30%, 30%);
-        max-width: 280px;
-    }
 
     .curriculo-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    gap: 2em;
-    margin-top: 2em;
-}
-
-    .curriculo-esquerda {
-        max-width: 600px;
-    }
-
-    .curriculo-profissional {
-        border: 1px solid var(--color-bg-alt);
-        max-width: 600px;
-    }
-
-    .experiencia {
-        padding: 2em 0;
+        margin-top: 2em;
     }
 }
+
+    @media (min-width: 1024px) {
+        .servico-card {
+            flex: 1 1 clamp(25%, 30%, 30%);
+            max-width: 280px;
+        }
+
+        .curriculo-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 2em;
+            margin-top: 2em;
+        }
+
+        .curriculo-esquerda {
+            max-width: 600px;
+
+        }
+
+        .curriculo-profissional {
+            border: 1px solid var(--color-bg-alt);
+            max-width: 600px;
+        }
+
+        .experiencia {
+            padding: 2em 0;
+        }
+    }
