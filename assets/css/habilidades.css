@@ -157,9 +157,9 @@
     text-align: center;
 }
 
-    .curriculo-container {
-        margin-top: 2em;
-    }
+.curriculo-container {
+    margin-top: 2em;
+}
 
 
 
@@ -185,9 +185,23 @@
 
 .perfil,
 .formacao,
-.idiomas {
+.idiomas,
+.competencias {
     background-color: var(--color-bg-alt);
     padding: 2em 2em 2em 2em;
+}
+
+.perfil a,
+.certificados a,
+.colaboracoes a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.perfil a:hover,
+.certificados a:hover,
+.colaboracoes a:hover {
+    color: var(--color-primary);
 }
 
 
@@ -294,7 +308,20 @@
 
 .curriculo-profissional div {
     padding: 1em 0;
-    
+
+}
+
+
+
+.btn-curriculo {
+  background: var(--color-primary-dark);
+  color: var(--color-text);
+  padding: clamp(0.4rem, 0.8vw, 0.5rem) clamp(1.5rem, 2vw, 2.5rem);
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.3s ease;
+  will-change: transform, background-color;
 }
 
 /* ===========================
@@ -333,35 +360,60 @@
     }
 }
 
-    @media (min-width: 1024px) {
-        .servico-card {
-            flex: 1 1 clamp(25%, 30%, 30%);
-            max-width: 280px;
-        }
-
-        .curriculo {
-            max-width: 1200px;
-        }
-
-        .curriculo-container {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            gap: 2em;
-            margin-top: 2em;
-        }
-
-        .curriculo-esquerda {
-            max-width: 600px;
-
-        }
-
-        .curriculo-profissional {
-            border: 1px solid var(--color-bg-alt);
-            max-width: 600px;
-        }
-
-        .experiencia {
-            padding: 2em 0;
-        }
+@media (min-width: 1024px) {
+    .servico-card {
+        flex: 1 1 clamp(25%, 30%, 30%);
+        max-width: 280px;
     }
+
+    .curriculo {
+        max-width: 1200px;
+    }
+
+    .curriculo-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2em;
+        margin-top: 2em;
+    }
+
+    .curriculo-esquerda {
+        max-width: 600px;
+
+    }
+
+    .curriculo-profissional {
+        border: 1px solid var(--color-bg-alt);
+        max-width: 600px;
+    }
+
+    .experiencia,
+    .curriculo-portfolio,
+    .certificados,
+    .colaboracoes {
+        padding: 2em 0;
+    }
+
+    .competencias {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 colunas iguais */
+        gap: 2rem;
+        /* espaço horizontal/vertical entre colunas */
+    }
+
+    .competencias>div {
+        margin-bottom: 1rem;
+        /* espaço extra entre seções */
+    }
+
+    .competencias>h3 {
+        grid-column: 1 / -1;
+        /* ocupa toda a largura */
+    }
+
+
+
+
+}
