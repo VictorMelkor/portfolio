@@ -172,9 +172,28 @@
     .sobre-mim {
         display: flex;
         flex-direction: row;
-        gap: 3em;
-        justify-content: center;
+        max-width: 1200px;
+        justify-content: space-evenly;
         padding-top: 2em;
+    }
+
+    .pai,
+    .dev {
+        max-width: 600px;
+        width: 100%;
         
     }
+
+    .pai {
+        flex: 1;
+        border-right: 1px solid var(--color-bg-alt);
+        padding-right: 2rem;
+    }
+
+    .dev {
+        flex: 1;
+        padding-left: 1rem;
+    }
+
+
 }
