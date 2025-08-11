@@ -1,25 +1,20 @@
-/* ===========================
-   SERVIÇOS - SEÇÃO PRINCIPAL
-=========================== */
 .servicos {
-    display: flex;
     width: 100%;
     background-color: var(--color-bg);
     padding: clamp(1.5rem, 2vw, 2.5rem) clamp(1rem, 2vw, 1.5rem);
     margin: auto auto;
-    justify-content: center;
+    text-align: center;
 }
 
 .servicos h2 {
     font-size: clamp(1.5rem, 2vw + 1rem, 2.5rem);
-    color: var(--color-primary);
     margin-bottom: 1rem;
     text-align: center;
 }
 
-.servicos > p {
+.servicos p {
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 2rem auto;
     color: var(--color-text);
     font-weight: 500;
     text-align: center;
@@ -35,6 +30,13 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+}
+
+.servico-card p {
+    margin-bottom: 0;
+    font-size: clamp(0.9rem, 0.5vw + 0.5rem, 1rem);
+    color: var(--color-text);
+    line-height: 1.4;
 }
 
 .servicos .servico-card:hover {
@@ -57,16 +59,6 @@
     font-size: clamp(1.1rem, 1vw + 0.5rem, 1.4rem);
 }
 
-.servico-card p {
-    font-size: clamp(0.9rem, 0.5vw + 0.5rem, 1rem);
-    color: var(--color-text);
-    line-height: 1.4;
-    
-}
-
-/* ===========================
-   INVESTIMENTO
-=========================== */
 .investimento {
     background-color: var(--color-bg);
     padding: clamp(2rem, 2vw, 3rem) clamp(1rem, 2vw, 1.5rem);
@@ -87,25 +79,23 @@
     font-weight: 500;
 }
 
-/* Container dos planos */
 .planos {
     display: flex;
     flex-direction: column;
     gap: clamp(1rem, 2vw, 1.5rem);
 }
 
-/* Cada plano */
 .plano {
     background: var(--color-primary-dark);
     border-radius: 15px;
     padding: clamp(1rem, 1vw + 0.5rem, 1.5rem) clamp(1rem, 2vw, 1.2rem);
-    padding-bottom: 3.5rem;   /* 🔥 adiciona espaço para o preço */
+    padding-bottom: 3.5rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     color: var(--color-text);
     cursor: default;
     position: relative;
     overflow: visible;
-    margin-bottom: 3rem;     /* 🔥 garante espaçamento entre os planos */
+    margin-bottom: 3rem;
 }
 
 .plano h3 {
@@ -115,25 +105,21 @@
     font-size: clamp(1.1rem, 1vw + 0.5rem, 1.4rem);
 }
 
-
-
 .preco {
     font-size: clamp(1.1rem, 1vw + 0.7rem, 1.3rem);
     font-weight: 700;
     background-color: var(--color-primary);
     padding: 0.8em 1.2em;
-    width: fit-content;
+    width: 80%;
     border-radius: 8px;
     position: absolute;
-    bottom: -20px;          /* 🔥 ajustado para não sobrepor o texto */
+    bottom: -20px;
     left: 50%;
     transform: translateX(-50%);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);  /* 🔥 sombra para destaque */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 80%;
 }
 
-/* 🔥 efeito no hover do preço */
 .preco:hover {
     transform: translateX(-50%) scale(1.15);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
@@ -146,9 +132,6 @@
     color: var(--color-text);
 }
 
-/* ===========================
-   CHAMADA PARA AÇÃO
-=========================== */
 .contato-servicos {
     background: var(--color-bg-alt);
     padding: clamp(1.5rem, 2vw, 3rem) clamp(1rem, 2vw, 1.5rem) clamp(2rem, 3vw, 3rem);
@@ -171,7 +154,6 @@
     font-size: clamp(0.9rem, 0.5vw + 0.5rem, 1rem);
 }
 
-/* Botão primário */
 .btn-primary {
     background: var(--color-primary-dark);
     color: #fff;
@@ -192,34 +174,27 @@
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-/* ===========================
-   RESPONSIVIDADE
-=========================== */
 @media (min-width: 768px) {
-    /* Layout dos cards e planos lado a lado */
     .servicos {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         gap: clamp(1rem, 2vw, 2rem);
         text-align: center;
     }
-
     .servicos .servico-card {
         flex: 1 1 clamp(28%, 30%, 32%);
         max-width: clamp(280px, 30vw, 320px);
     }
-
     .planos {
         flex-direction: row;
         justify-content: center;
         gap: clamp(1rem, 2vw, 2rem);
     }
-
     .plano {
         flex: 1 1 clamp(28%, 30%, 32%);
         max-width: clamp(280px, 30vw, 320px);
     }
-
     .contato-servicos {
         padding: clamp(2.5rem, 3vw, 3rem) clamp(1rem, 2vw, 1.5rem);
     }
@@ -232,11 +207,9 @@
         max-width: 1200px;
         margin: 6rem auto 0 auto;
     }
-
     .servicos article {
         flex-wrap: nowrap;
     }
-
     .servico-card,
     .plano {
         max-width: 400px;

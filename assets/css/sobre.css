@@ -1,7 +1,4 @@
-/* ===========================
-   🔹 SOBRE - MOBILE FIRST
-=========================== */
-.sobre, .valores{
+.sobre, .valores {
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -11,26 +8,51 @@
     background-color: var(--color-bg);
 }
 
-.sobre {
-    margin-top: 5em;
-    
-}
-
 .valores {
     background-color: var(--color-bg);
     margin-bottom: 5em;
+    gap: 1.5rem;
+    margin-top: 2rem;
 }
 
-/* Parágrafos da seção sobre */
+.valor-card {
+    background: var(--color-primary-dark);
+    padding: 1.5rem;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.valor-card i {
+    font-size: 2.5rem;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+}
+
+.valor-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+}
+
+.valor-card p {
+    color: var(--color-text);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.valor-card:hover {
+    transform: translateY(-15px);
+    background: var(--color-primary);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* MOBILE FIRST - SOBRE */
 .sobre p {
     padding: clamp(0.8rem, 1vw, 1.2rem) 0 0 clamp(1rem, 2vw, 1.5rem);
     text-align: left;
-    /* alinhamento à esquerda para melhor leitura */
 }
 
-
-
-/* Container geral com fundo e bordas arredondadas */
 .sobre-container {
     display: flex;
     flex-direction: column;
@@ -42,7 +64,6 @@
     gap: clamp(0.8rem, 1vw, 1.2rem);
 }
 
-/* Texto dentro do container */
 .sobre-text {
     flex: 1;
     background-color: var(--color-purple-dark);
@@ -51,7 +72,12 @@
     text-align: left;
 }
 
-/* 🔥 Título + ícone alinhados horizontalmente */
+.sobre-text p {
+    text-align: center;
+    line-height: 1.5;
+    margin: 0;
+}
+
 .sobre-header {
     display: flex;
     align-items: center;
@@ -66,67 +92,13 @@
     text-align: center;
 }
 
-/* Ícone ao lado do título, tamanho fixo */
 .sobre-header .sobre-icone {
     width: clamp(30px, 4vw, 40px);
     height: clamp(30px, 4vw, 40px);
     text-align: center;
 }
 
-/* Texto dentro da sobre-text com centralização para destaque */
-.sobre-text p {
-    text-align: center;
-    line-height: 1.5;
-    margin: 0;
-}
-
-/* ===========================
-   VALORES - MESMO PADRÃO SERVIÇOS
-=========================== */
-.valores {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-.valor-card {
-    background: var(--color-primary-dark);
-    padding: 1.5rem;
-    border-radius: 20px;
-    text-align: center;
-    transition: transform 0.3s ease, background 0.3s ease;
-}
-
-/* Ícones */
-.valor-card i {
-    font-size: 2.5rem;
-    color: var(--color-text);
-    margin-bottom: 1rem;
-}
-
-/* Título */
-.valor-card h4 {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-    color: var(--color-text);
-}
-
-/* Texto */
-.valor-card p {
-    color: var(--color-text);
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-/* Hover (para desktop) */
-.valor-card:hover {
-    transform: translateY(-5px);
-    background: var(--color-primary);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-/* Responsivo - em telas maiores, lado a lado */
+/* RESPONSIVO */
 @media (min-width: 768px) {
     .valores {
         flex-direction: row;
@@ -137,28 +109,19 @@
         flex: 1;
         max-width: 32%;
     }
-}
 
-
-/* ===========================
-   📌 BREAKPOINTS - RESPONSIVIDADE
-=========================== */
-@media (min-width: 768px) {
     .sobre-container {
         flex-direction: row;
     }
 
-    /* Ajusta texto para ocupar metade do container */
     .sobre-text {
         max-width: 50%;
     }
 
-    /* Texto do parágrafo alinhado à esquerda no desktop */
     .sobre-text p {
         text-align: left;
     }
 
-    /* Ajusta título para alinhamento padrão */
     .sobre-header {
         justify-content: flex-start;
     }
@@ -166,6 +129,10 @@
     .sobre-header h3 {
         text-align: left;
     }
+}
+
+.dev h2 {
+    padding-top: 2rem;
 }
 
 @media (min-width: 1024px) {
@@ -181,7 +148,6 @@
     .dev {
         max-width: 600px;
         width: 100%;
-        
     }
 
     .pai {
@@ -194,6 +160,4 @@
         flex: 1;
         padding-left: 1rem;
     }
-
-
 }

@@ -1,34 +1,50 @@
-/* ===========================
-   PORTFÓLIO
-=========================== */
 .portfolio {
     width: 100%;
     background-color: var(--color-bg);
     padding: clamp(1.5rem, 2vw, 3rem) clamp(1rem, 2vw, 2rem);
-    margin: 0;
     text-align: center;
 }
 
 .portfolio.container {
     max-width: none;
     padding: clamp(2rem, 3vw, 4rem) clamp(1.5rem, 3vw, 4rem);
-    
 }
 
 .portfolio h2 {
     font-size: clamp(1.5rem, 2vw + 1rem, 2.5rem);
-    color: var(--color-pink-light);
+    color: var(--color-text);
     margin-bottom: 1rem;
 }
 
 .portfolio > p {
     max-width: clamp(300px, 50vw, 650px);
     margin: 0 auto 2.5rem;
-    color: var(--color-muted);
+    color: var(--color-text);
     font-weight: 500;
 }
 
-/* Grid de cards */
+.portfolio-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filter-btn {
+    background-color: var(--color-primary-dark);
+    border: none;
+    padding: 0.5em 0.8em;
+    margin: 0.5em 0.5em;
+    border-radius: 5px;
+    font-family: var(--font-family-base);
+}
+
+.filter-btn:hover {
+    background-color: var(--color-primary);
+    transform: translateY(-5px);
+    transition: 0.5s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
 .portfolio-grid {
     display: flex;
     flex-direction: column;
@@ -36,7 +52,6 @@
     padding: 2em 0 0 0;
 }
 
-/* Card do projeto */
 .portfolio-card {
     background: var(--color-primary-dark);
     border-radius: 15px;
@@ -46,21 +61,19 @@
     text-decoration: none;
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 }
 
 .portfolio-card:hover,
 .portfolio-card:focus {
     transform: translateY(-15px);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
     outline: none;
     background-color: var(--color-primary);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-/* Container do Swiper dentro do card */
 .portfolio-card .swiper {
     width: 100%;
     max-height: clamp(180px, 20vw, 280px);
@@ -69,18 +82,15 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-/* Imagens do swiper */
 .portfolio-card .swiper-slide img {
     width: 100%;
     height: auto;
     display: block;
     object-fit: cover;
     margin: 1em 0;
-    
     border-radius: 15px;
 }
 
-/* Info do projeto */
 .portfolio-info {
     padding: clamp(1rem, 1vw + 0.5rem, 1.5rem) clamp(0.8rem, 1vw + 0.5rem, 1rem);
     text-align: left;
@@ -99,7 +109,6 @@
     line-height: 1.4;
 }
 
-/* Swiper navegação - setas */
 .portfolio-card .swiper-button-prev,
 .portfolio-card .swiper-button-next {
     display: none;
@@ -116,10 +125,8 @@
 .portfolio-card .swiper-button-next:hover {
     opacity: 1;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    
 }
 
-/* Swiper paginação (bolinhas) */
 .portfolio-card .swiper-pagination-bullet {
     background: var(--color-pink-light);
     opacity: 0.7;
@@ -129,31 +136,6 @@
     opacity: 1;
 }
 
-/* Transição suave ao filtrar */
-.portfolio-card {
-    transition: opacity 0.3s ease-in-out;
-}
-
-.filter-btn {
-    background-color: var(--color-primary-dark);
-    border: none;
-    padding: 0.5em 0.8em;
-    margin: 0.5em 0.5em ;
-    border-radius: 5px;
-    font-family: var(--font-family-base);
-}
-
-.filter-btn:hover {
-    background-color: var(--color-primary);
-    transform: translateY(-5px);
-    transition: 0.5s ease;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    
-}
-
-/* ===========================
-   CTA Final do Portfólio
-=========================== */
 .portfolio-cta {
     text-align: center;
     padding: clamp(2rem, 3vw, 4rem) clamp(1rem, 2vw, 2rem);
@@ -190,22 +172,20 @@
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-/* ===========================
-   RESPONSIVIDADE
-=========================== */
 @media (min-width: 768px) {
+    .portfolio {
+        margin-top: 0;
+    }
     .portfolio-grid {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         gap: clamp(1rem, 2vw, 2rem);
     }
-
     .portfolio-card {
         flex: 1 1 clamp(45%, 45%, 48%);
         max-width: clamp(400px, 40vw, 480px);
     }
-
     .portfolio-card .swiper {
         max-height: clamp(220px, 25vw, 250px);
     }
@@ -216,7 +196,6 @@
         flex: 1 1 clamp(40%, 40%, 45%);
         max-width: clamp(420px, 38vw, 460px);
     }
-
     .portfolio-card .swiper {
         max-height: clamp(240px, 27vw, 280px);
     }

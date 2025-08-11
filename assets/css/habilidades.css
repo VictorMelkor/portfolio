@@ -1,6 +1,3 @@
-/* ===========================
-   🔹 ESPECIALIDADES - MOBILE FIRST
-=========================== */
 .especialidades {
     width: 100vw;
     margin-left: calc(-50vw + 50%);
@@ -16,14 +13,12 @@
     margin: 0 auto clamp(1.5rem, 2vw, 2rem);
 }
 
-/* Container de serviços */
 .servicos {
     display: flex;
     flex-direction: column;
     gap: clamp(1.5rem, 2vw, 2rem);
 }
 
-/* Card de cada especialidade */
 .servico-card {
     flex-direction: column;
     justify-content: center;
@@ -53,7 +48,6 @@
     color: var(--color-gray-light);
 }
 
-/* Efeito hover */
 .servico-card:hover {
     background-color: var(--color-primary);
     transform: translateY(-25px);
@@ -62,9 +56,6 @@
     border: none;
 }
 
-/* ===========================
-   🔹 HARD SKILLS
-=========================== */
 .hard-skills-index {
     width: 100vw;
     margin-left: calc(-50vw + 50%);
@@ -85,7 +76,6 @@
     margin: 0 auto clamp(1.5rem, 2vw, 2rem);
 }
 
-/* Categorias */
 .skills-categorias {
     display: flex;
     flex-direction: column;
@@ -93,7 +83,6 @@
     gap: clamp(1.5rem, 2vw, 2rem);
 }
 
-/* Títulos das categorias */
 .categoria h4 {
     color: var(--color-text);
     margin-bottom: clamp(0.8rem, 1vw, 1rem);
@@ -101,7 +90,6 @@
     font-size: clamp(1rem, 1vw + 0.2rem, 1.2rem);
 }
 
-/* Barra Skill */
 .barra-skill {
     position: relative;
     background: var(--color-bg-alt);
@@ -139,46 +127,55 @@
     width: 100vw;
     margin-left: calc(-50vw + 50%);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: clamp(1.5rem, 2vw, 2.5rem) clamp(1rem, 2vw, 1.5rem);
+    background-color: var(--color-bg);
 }
 
 .habilidades h3 {
     text-align: center;
 }
 
-/* ===========================
-   🔹 CURRÍCULO - MOBILE FIRST
-=========================== */
 .curriculo {
     display: flex;
     flex-direction: column;
     margin: auto;
-    margin-top: 5em;
     padding: 2em 1em;
     text-align: center;
+    max-width: 1200px;
 }
 
 .curriculo-container {
     margin-top: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2em;
 }
 
+.curriculo-esquerda {
+    max-width: 600px;
+}
 
-
-
-
-/* ===========================
-   HABILIDADES - MOBILE FIRST
-=========================== */
-.habilidades {
+.curriculo-profissional {
     display: flex;
     flex-direction: column;
-    padding: clamp(1.5rem, 2vw, 2.5rem) clamp(1rem, 2vw, 1.5rem);
+    align-items: first baseline;
+    padding: 0 2em 1em 2em;
     text-align: left;
-    background-color: var(--color-bg);
+    border: 1px solid var(--color-bg-alt);
+    margin-bottom: 1em;
+    max-width: 600px;
 }
 
+.curriculo-profissional div {
+    padding: 1em 0;
+}
+
+.profissional,
 .curriculo article,
-.habilidades article,
-.profissional {
+.habilidades article {
     margin-top: 0;
     text-align: left;
 }
@@ -204,57 +201,24 @@
     color: var(--color-primary);
 }
 
-
-
-/* ===========================
-   HARD SKILLS
-=========================== */
-.hard-skills {
-    background-color: var(--color-purple-dark);
-    border-radius: 20px;
-    padding: clamp(1rem, 1.5vw, 1.5rem);
-    margin-top: clamp(1.5rem, 2vw, 2.5rem);
-}
-
-.skill {
-    display: flex;
-    align-items: center;
-    gap: clamp(0.5rem, 1vw, 1rem);
-    margin-bottom: clamp(0.8rem, 1vw, 1rem);
-}
-
-.skill span:first-child {
-    width: clamp(90px, 10vw, 120px);
+.btn-curriculo {
+    display: block;
+    width: 100%;
+    background: var(--color-primary-dark);
+    color: var(--color-text);
+    padding: clamp(0.4rem, 0.8vw, 0.5rem) clamp(1.5rem, 2vw, 2.5rem);
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
     font-weight: 600;
-    white-space: nowrap;
+    transition: background 0.3s ease, transform 0.3s ease;
+    will-change: transform, background-color;
 }
 
-.progress-bar {
-    flex: 1;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
-    height: clamp(8px, 1vw, 10px);
+.tecnicas {
+    padding: 1em 0;
 }
 
-.progress {
-    background: linear-gradient(90deg, var(--color-pink-light), var(--color-indigo));
-    height: 100%;
-    width: 0;
-    border-radius: 10px;
-    transition: width 1.2s ease;
-}
-
-.percent {
-    min-width: clamp(35px, 5vw, 40px);
-    text-align: right;
-    font-weight: bold;
-    font-size: clamp(0.8rem, 0.8vw, 1rem);
-}
-
-/* ===========================
-   SOFT SKILLS
-=========================== */
 .soft-skills {
     width: 100vw;
     margin-left: calc(-50vw + 50%);
@@ -293,40 +257,6 @@
     line-height: 1.4;
 }
 
-/* ===========================
-   CURRÍCULO PROFISSIONAL
-=========================== */
-.curriculo-profissional {
-    display: flex;
-    flex-direction: column;
-    align-items: first baseline;
-    padding: 0 2em 1em 2em;
-    text-align: left;
-    border: 1px solid var(--color-bg-alt);
-    margin-bottom: 1em;
-}
-
-.curriculo-profissional div {
-    padding: 1em 0;
-
-}
-
-
-
-.btn-curriculo {
-  background: var(--color-primary-dark);
-  color: var(--color-text);
-  padding: clamp(0.4rem, 0.8vw, 0.5rem) clamp(1.5rem, 2vw, 2.5rem);
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s ease, transform 0.3s ease;
-  will-change: transform, background-color;
-}
-
-/* ===========================
-   🔹 RESPONSIVIDADE
-=========================== */
 @media (min-width: 768px) {
     .servicos {
         flex-direction: row;
@@ -380,7 +310,6 @@
 
     .curriculo-esquerda {
         max-width: 600px;
-
     }
 
     .curriculo-profissional {
@@ -398,22 +327,14 @@
     .competencias {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        /* 2 colunas iguais */
         gap: 2rem;
-        /* espaço horizontal/vertical entre colunas */
     }
 
-    .competencias>div {
+    .competencias > div {
         margin-bottom: 1rem;
-        /* espaço extra entre seções */
     }
 
-    .competencias>h3 {
+    .competencias > h3 {
         grid-column: 1 / -1;
-        /* ocupa toda a largura */
     }
-
-
-
-
 }
