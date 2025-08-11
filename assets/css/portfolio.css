@@ -138,9 +138,11 @@
 
 .portfolio-cta {
     text-align: center;
+    background-color: var(--color-bg-alt);
     padding: clamp(2rem, 3vw, 4rem) clamp(1rem, 2vw, 2rem);
     border-radius: 15px;
     margin-top: clamp(2rem, 3vw, 4rem);
+    margin-bottom: 4rem;
     color: var(--color-text);
 }
 
@@ -199,4 +201,5 @@
     .portfolio-card .swiper {
         max-height: clamp(240px, 27vw, 280px);
     }
+
 }
