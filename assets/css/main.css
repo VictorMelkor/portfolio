@@ -149,6 +149,30 @@ h3 {
   color: var(--color-primary);
 }
 
+/* ===========================
+   ANIMAÇÕES
+=========================== */
+
+.animar-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+  visibility: visible;
+}
+
+.animar-section.visivel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animar-section.saindo {
+  opacity: 0;
+  transform: translateY(-50px);
+}
+
+
+
+
 
 /* ===========================
    BREAKPOINTS
