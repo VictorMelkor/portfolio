@@ -3,7 +3,7 @@
 =========================== */
 .blog {
     background-color: var(--color-bg);
-    display: flex;
+    display: none;
     flex-direction: column;
     padding: clamp(1.5rem, 2vw, 2.5rem) clamp(1rem, 2vw, 1.5rem);
     text-align: center;

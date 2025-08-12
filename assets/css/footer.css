@@ -118,6 +118,10 @@
   margin: 0;
 }
 
+.termos {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .footer {
     display: flex;
