@@ -112,6 +112,7 @@ main {
 
 /* Botão de troca de tema */
 #theme-toggle {
+  display: none;
   background: none;
   color: var(--color-bg-alt);
   border: none;
