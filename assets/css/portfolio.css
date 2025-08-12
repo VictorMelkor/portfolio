@@ -87,8 +87,10 @@
     height: auto;
     display: block;
     object-fit: cover;
-    margin: 1em 0;
+    margin: 2em 0;
     border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    
 }
 
 .portfolio-info {
@@ -109,31 +111,16 @@
     line-height: 1.4;
 }
 
-.portfolio-card .swiper-button-prev,
-.portfolio-card .swiper-button-next {
-    display: none;
-    color: var(--color-primary);
-    top: 50%;
-    width: clamp(20px, 2vw, 30px);
-    height: clamp(20px, 2vw, 30px);
-    margin-top: calc(-1 * clamp(10px, 1vw, 15px));
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
-}
-
-.portfolio-card .swiper-button-prev:hover,
-.portfolio-card .swiper-button-next:hover {
-    opacity: 1;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
 .portfolio-card .swiper-pagination-bullet {
-    background: var(--color-pink-light);
+    background: var(--color-text);
+    border: 1px solid var(--color-primary);
     opacity: 0.7;
 }
 
 .portfolio-card .swiper-pagination-bullet-active {
     opacity: 1;
+    background-color: var(--color-primary);
+    border: 1px solid var(--color-text);
 }
 
 .portfolio-cta {

@@ -3,7 +3,7 @@ const observador = new IntersectionObserver((entradas) => {
     const el = entrada.target;
     const ratio = entrada.intersectionRatio;
 
-    if (ratio >= 0.4) {
+    if (ratio >= 0.2) {
       // Entrou: mostra e cancela qualquer timeout para sumir
       if (el._timeoutSaida) {
         clearTimeout(el._timeoutSaida);
@@ -23,7 +23,7 @@ const observador = new IntersectionObserver((entradas) => {
     }
   });
 }, {
-  threshold: [0, 0.4, 1]
+  threshold: [0, 0.2, 1]
 });
 
 document.querySelectorAll('.animar-section').forEach(el => observador.observe(el));
